@@ -1,0 +1,141 @@
+header {
+    background: rgb(255, 255, 255);
+    position: relative;
+    height: 130px; /* Adjust as needed */
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute;
+    top: 20px; /* Position the logo at the top */
+    left: 20px; /* Position the logo to the left */
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Navigation Links */
+.nav {
+    position: absolute;
+    bottom: 20%; /* Position at the bottom of the header */
+    left: 10%; /* Align to the left */
+}
+
+/* Navigation Links */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    gap: 20px; /* Add spacing between items */
+}
+
+.nav ul li {
+    margin-right: 20px; /* Add spacing between links */
+    position: relative;
+}
+
+.nav ul li a {
+    color: #7979f6;
+    text-decoration: none;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    color: #7979f6;
+    top: 100%; /* Position dropdown below parent */
+    left: 0;
+    min-width: 200px;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f4f4f4;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Buttons Container */
+.header-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Add spacing between buttons */
+  top: 40px; /* Align to the top */
+  right: 100px; /* Align to the right */
+}
+
+/* Styling for Call Now Link */
+.call-now-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #ffcc00;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Schedule Service Button */
+.schedule-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Common button styles */
+.schedule-btn, .call-now-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+/* Button Icon Styling */
+.button-icon {
+    width: 20px; /* Adjust the icon size */
+    height: 20px;
+}
+

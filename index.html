@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Service Electric</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/schedule_service_form.css">
+</head>
+
+<header>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="assets/images/logo.jpg" alt="Logo" class="logo">
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="#">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#">ELECTRICAL SERVICES</a>
+                    <ul id="services-dropdown" class="dropdown-menu"></ul>
+                </li>
+                <li><a href="#">REVIEWS</a></li>
+<!--                <li><a href="#">Coupons</a></li>-->
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Buttons -->
+    <div class="header-buttons">
+        <a href="tel:8886467066" class="call-now-btn" onclick="return confirm('Do you want to call 888-646-7066?')">
+        <img src="assets/images/call.png" alt="Call Icon" class="button-icon">
+        Call 888-646-7066
+    </a>
+        <button class="schedule-btn" onclick="openPopup()">
+            <img src="assets/images/event.png" alt="Schedule Icon" class="button-icon">
+            SCHEDULE SERVICE
+        </button>
+    </div>
+
+</header>
+
+<div class="schedule-popup" id="schedulePopup">
+  <div class="popup-content">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <h2>SCHEDULE SERVICE</h2>
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/viewform" method="POST">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="entry.1592039410" required>
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="entry.740843060" required>
+
+      <label for="phone">Phone Number*</label>
+      <input type="tel" id="phone" name="entry.614905836" required>
+
+      <label for="address">Address*</label>
+      <input type="text" id="address" name="entry.688701368" required>
+
+      <label for="service">Which Service do you need?</label>
+      <select id="service" name="entry.720414955">
+        <option value="Breakers/Panels">Breakers/Panels</option>
+        <option value="Wiring">Wiring</option>
+        <option value="Lighting">Lighting</option>
+      </select>
+
+      <button type="submit">SEND</button>
+    </form>
+    <p>Form submissions will be answered during normal business hours.<br>
+      For emergencies, call <a href="tel:8886467066">888-646-7066</a>.
+    </p>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<main>
+    <section class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <h2>WE ARE OPEN.</h2>
+                <p>Los Angeles' top electricians are currently open for business!</p>
+                <button class="schedule-btn-window" onclick="openPopup()">SCHEDULE SERVICE</button>
+            </div>
+            <div class="slide">
+                <h2>24/7 EMERGENCY SERVICES.</h2>
+                <p>Need help now? Call us for immediate assistance!</p>
+                <button class="schedule-btn-window" onclick="openPopup()">SCHEDULE SERVICE</button>
+            </div>
+            <div class="slide">
+                <h2>LICENSED & INSURED.</h2>
+                <p>Trust our team of licensed and insured professionals.</p>
+                <button class="schedule-btn-window" onclick="openPopup()">SCHEDULE SERVICE</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+  <script src="assets/js/windows.js"></script>
+  <script src="assets/js/services-dd.js"></script>
+  <script src="assets/js/schedule_service_form.js"></script>
+
+
+</html>

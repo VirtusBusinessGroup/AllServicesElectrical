@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Service Electric</title>
+  <title>All Service Electrical</title>
   <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/schedule_service_form.css">
@@ -50,25 +50,14 @@
     <button class="close-popup" onclick="closePopup()">×</button>
     <h2>SCHEDULE SERVICE</h2>
     <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/viewform" method="POST">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="entry.1592039410" required>
-
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="entry.740843060" required>
-
-      <label for="phone">Phone Number*</label>
-      <input type="tel" id="phone" name="entry.614905836" required>
-
-      <label for="address">Address*</label>
-      <input type="text" id="address" name="entry.688701368" required>
-
-      <label for="service">Which Service do you need?</label>
-      <select id="service" name="entry.720414955">
-        <option value="Breakers/Panels">Breakers/Panels</option>
-        <option value="Wiring">Wiring</option>
-        <option value="Lighting">Lighting</option>
-      </select>
-
+        <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
+        <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
+        <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
+        <input type="text" id="address" name="entry.688701368" placeholder="Address*" required>
+        <label for="service">Which Service do you need?</label>
+        <select id="service" name="entry.720414955">
+          <!-- Options will be dynamically inserted here -->
+        </select>
       <button type="submit">SEND</button>
     </form>
     <p>Form submissions will be answered during normal business hours.<br>

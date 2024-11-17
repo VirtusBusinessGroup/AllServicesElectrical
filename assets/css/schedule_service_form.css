@@ -12,13 +12,14 @@
 
 /* Popup Content */
 .popup-content {
-  background: red;
+  background: #c9daf8;
   color: white;
-  width: 400px;
+  width: 50%;
   margin: 100px auto;
   padding: 20px;
   border-radius: 8px;
   position: relative;
+  text-align: center;
 }
 
 .close-popup {
@@ -27,7 +28,7 @@
   right: 10px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
 }
@@ -35,12 +36,42 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  align-items: center;
 }
 
-input, select{
-  width: 100%;
+input, select {
+  width: 80%;
   padding: 10px;
   border: none;
   border-radius: 4px;
+  text-align: left;
+  font-size: 16px; /* Match font size */
+  height: 40px; /* Match height for consistency */
+}
+
+/* Remove underline and bold link */
+form p a {
+  color: white; /* Ensure link is visible on a blue background */
+  font-weight: bold; /* Make text bold */
+  text-decoration: none !important; /* Remove underline with higher specificity */
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Label Styling */
+label[for="service"] {
+  font-size: 18px; /* Bigger font size */
+  font-weight: bold;
 }

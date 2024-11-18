@@ -250,20 +250,145 @@ body {
     background: #e69500; /* Darker orange on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .services-full-width {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .services-text, .services-icons {
-        max-width: 100%; /* Stack elements vertically */
-    }
-
-    .services-icons {
-        grid-template-columns: 1fr; /* Single column layout for icons */
-    }
+/* Testimonial Section */
+.testimonial-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    padding: 60px 5%;
+    box-sizing: border-box;
 }
+
+/* Background Image */
+.testimonial-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.testimonial-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the section */
+    opacity: 0.85; /* Slightly dim the image for readability */
+}
+
+/* Testimonial Content */
+.testimonial-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Ensure content is above the background */
+    flex-wrap: wrap; /* Make it responsive */
+    gap: 20px;
+}
+
+/* Left Section */
+.testimonial-left {
+    flex: 1;
+    text-align: left;
+    max-width: 40%;
+}
+
+.testimonial-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.leave-review-btn {
+    background-color: #c32d2d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.leave-review-btn:hover {
+    background-color: #a02424;
+}
+
+/* Right Section */
+.testimonial-right {
+    flex: 2;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+}
+
+.testimonial-quote {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.quote-icon {
+    font-size: 50px;
+    color: #3a82f6;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.testimonial-author {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #3a82f6;
+}
+
+/*!* Responsive Design *!*/
+/*@media (max-width: 768px) {*/
+/*    .testimonial-content {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .testimonial-left,*/
+/*    .testimonial-right {*/
+/*        max-width: 100%;*/
+/*    }*/
+
+/*    .testimonial-left h2 {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .leave-review-btn {*/
+/*        display: block;*/
+/*        margin: 0 auto 20px;*/
+/*    }*/
+/*}*/
+
+
+/*!* Responsive Design *!*/
+/*@media (max-width: 768px) {*/
+/*    .services-full-width {*/
+/*        flex-direction: column;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .services-text, .services-icons {*/
+/*        max-width: 100%; !* Stack elements vertically *!*/
+/*    }*/
+
+/*    .services-icons {*/
+/*        grid-template-columns: 1fr; !* Single column layout for icons *!*/
+/*    }*/
+/*}*/
 
 

@@ -1,21 +1,36 @@
 .carousel {
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-  width: 60%;
-  margin: 0 auto; /* Center the carousel horizontally */
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 80%;
+    margin: 0 auto; /* Center the carousel horizontally */
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+
 }
 
 .slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  min-width: 100%;
-  text-align: center;
-  background: #c9daf8;
-  padding: 50px 20px;
+    min-width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: #c9daf8;
+    padding: 40px; /* Add space inside the slide */
+    box-sizing: border-box; /* Include padding in width/height */
+    text-align: center;
+}
+
+.slide p {
+    font-size: 18px;
+    /*color: white;*/
 }
 
 /* Schedule Service Button */

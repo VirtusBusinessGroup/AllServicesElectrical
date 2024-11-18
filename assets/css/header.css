@@ -7,11 +7,12 @@ header {
     align-items: flex-start;
 }
 
-/* Logo Container */
+/* Logo and Company Name */
 .logo-container {
-    position: absolute;
-    top: 20px; /* Position the logo at the top */
-    left: 20px; /* Position the logo to the left */
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center logo and text together */
+    gap: 10px;
 }
 
 .logo {
@@ -19,11 +20,17 @@ header {
     height: auto;
 }
 
+.company-name {
+    font-size: 32px; /* Big text for company name */
+    font-weight: bold;
+    color: #3a82f6; /* Use the primary blue color */
+}
+
 /* Navigation Links */
 .nav {
     position: absolute;
-    bottom: 20%; /* Position at the bottom of the header */
-    left: 10%; /* Align to the left */
+    bottom: 0; /* Position at the bottom of the header */
+    left: 25%; /* Align to the left */
 }
 
 /* Navigation Links */
@@ -72,6 +79,8 @@ header {
 .dropdown-menu li {
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 4px;
+    background: #fff;
 }
 
 .dropdown-menu li:hover {
@@ -84,6 +93,7 @@ header {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    border-radius: 4px;
 }
 
 /* Buttons Container */

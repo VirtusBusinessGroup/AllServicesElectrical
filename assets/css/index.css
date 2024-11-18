@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
@@ -13,6 +17,7 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .slide {
@@ -26,11 +31,12 @@
     padding: 40px; /* Add space inside the slide */
     box-sizing: border-box; /* Include padding in width/height */
     text-align: center;
+    flex: 0 0 100%; /* Prevent shrinking or overflowing */
+    width: 100%;
 }
 
 .slide p {
     font-size: 18px;
-    /*color: white;*/
 }
 
 /* Schedule Service Button */
@@ -51,3 +57,150 @@
     width: 20px; /* Adjust the icon size */
     height: 20px;
 }
+
+/* Full-width Services Section */
+.services-full-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align content to the top */
+    width: 100%; /* Full width */
+    padding: 40px 5%; /* Add padding on the sides */
+    box-sizing: border-box;
+    background-color: #ffffff; /* Optional: Background color */
+    gap: 20px; /* Space between sections */
+}
+
+/* Text Section */
+.services-text {
+    flex: 2; /* Allocate slightly more space for text */
+    text-align: left;
+    max-width: 50%; /* Limit text width */
+}
+
+.services-text h2 {
+    color: #3a82f6; /* Red heading color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.services-text p {
+    color: #555; /* Dark gray for readability */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.services-text .learn-more-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.services-text .learn-more-btn:hover {
+    background: #e69500; /* Darker orange on hover */
+}
+
+/* Icons Section */
+.services-icons {
+    flex: 1; /* Allocate less space for icons */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for icons */
+    gap: 20px; /* Space between items */
+    align-items: start; /* Align items to the top */
+    justify-items: center; /* Center icons in their section */
+    text-align: center;
+    width: 100%;
+}
+
+.service-item {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.service-item img {
+    width: 60px; /* Icon size */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 14px;
+    color: #3a82f6; /* Red text color */
+    text-transform: uppercase;
+}
+
+/* Promo Section */
+.promo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+    background-color: #ffffff; /* Background color */
+    gap: 20px; /* Space between promo card and service info */
+    box-sizing: border-box;
+}
+
+
+/* After-Hour Service */
+.after-hour-service {
+    background-color: #c9daf8; /* Red background */
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 2; /* Larger width compared to promo card */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.after-hour-service h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: black; /* Gold text color */
+    text-transform: uppercase;
+}
+
+.after-hour-service p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.after-hour-service button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.after-hour-service button:hover {
+    background-color: #ffb300; /* Slightly darker gold */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-full-width {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-text, .services-icons {
+        max-width: 100%; /* Stack elements vertically */
+    }
+
+    .services-icons {
+        grid-template-columns: 1fr; /* Single column layout for icons */
+    }
+}
+
+

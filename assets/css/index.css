@@ -187,6 +187,69 @@ body {
 }
 
 
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 5%;
+    gap: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Makes it mobile-friendly */
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for the image */
+}
+
+.about-us-content {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-us-content h3 {
+    font-size: 28px;
+    color: #3a82f6; /* Blue color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-us-content p {
+    font-size: 16px;
+    color: #555; /* Gray color */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.see-service-area-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.see-service-area-btn:hover {
+    background: #e69500; /* Darker orange on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .services-full-width {

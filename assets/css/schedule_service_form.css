@@ -13,7 +13,7 @@
 /* Popup Content */
 .popup-content {
   background: #c9daf8;
-  color: white;
+  color: black;
   width: 50%;
   margin: 100px auto;
   padding: 20px;
@@ -29,7 +29,7 @@
   background: none;
   border: none;
   font-size: 40px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 

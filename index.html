@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Service Electrical</title>
+  <meta name="description" content="All Service Electrical: Licensed electricians providing top-notch residential and commercial electrical services in Los Angeles. Contact us today for reliable electrical repairs, LED lighting, and panel upgrades.">
+  <meta name="keywords" content="electricians Los Angeles, electrical repairs, panel upgrades, LED lighting, licensed electricians, reliable electrical services">
+  <meta name="author" content="Virtus Business Group">
+  <link rel="canonical" href="https://www.allserviceelectrical.com/" />
+  <title>All Service Electrical | Licensed Electricians in Los Angeles</title>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "All Service Electrical",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11727 W Washington Blvd",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90066",
+      "addressCountry": "US"
+    },
+    "telephone": "+13103978849",
+    "openingHours": "Mo-Fr 08:00-18:00, Sa-Su 08:00-15:00",
+    "description": "All Service Electrical provides licensed electrical services for residential and commercial clients in Los Angeles, specializing in repairs, installations, LED lighting, and panel upgrades."
+
+  }
+  </script>
+<!--        "url": "https://www.allserviceelectrical.com/",-->
+<!--    "logo": "https://www.allserviceelectrical.com/assets/images/logo.jpg",-->
+<!--    "sameAs": [-->
+<!--      "https://www.facebook.com/AllServiceElectrical",-->
+<!--      "https://www.instagram.com/AllServiceElectrical"-->
+<!--    ]-->
   <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/footer.css">
@@ -14,7 +46,7 @@
     <!-- Logo -->
     <div class="logo-container">
         <a href="index.html">
-            <img src="assets/images/logo.jpg" alt="Logo" class="logo">
+            <img src="assets/images/logo.jpg" alt="All Service Electrical Logo" class="logo">
         </a>
         <a href="index.html" style="text-decoration: none">
             <h1 class="company-name">All Service Electrical</h1>
@@ -25,14 +57,13 @@
     <div class="nav">
         <nav>
             <ul>
-                <li><a href="#about-us-section">ABOUT US</a></li>
+                <li><a href="#about-us-section" title="Learn about our electricians">ABOUT US</a></li>
                 <li class="dropdown">
-                    <a href="#">ELECTRICAL SERVICES</a>
+                    <a href="assets/html/electrical_services.html" title="Explore our electrical services">ELECTRICAL SERVICES</a>
                     <ul id="services-dropdown" class="dropdown-menu"></ul>
                 </li>
-                <li><a href="#">REVIEWS</a></li>
-<!--                <li><a href="#">Coupons</a></li>-->
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="assets/html/reviews.html" title="Read customer reviews">REVIEWS</a></li>
+                <li><a href="assets/html/contact_us.html" title="Contact us for reliable electrical solutions">CONTACT US</a></li>
             </ul>
         </nav>
     </div>
@@ -40,11 +71,11 @@
     <!-- Buttons -->
     <div class="header-buttons">
         <a href="tel:3103978849" class="call-now-btn" onclick="return confirm('Do you want to call 310-397-8849?')">
-        <img src="assets/images/call.png" alt="Call Icon" class="button-icon">
+        <img src="assets/images/call.png" alt="Call us now" class="button-icon">
         Call 310-397-8849
     </a>
         <button class="schedule-btn" onclick="openPopup()">
-            <img src="assets/images/event.png" alt="Schedule Icon" class="button-icon">
+            <img src="assets/images/event.png" alt="Schedule Service" class="button-icon">
             SCHEDULE SERVICE
         </button>
     </div>
@@ -225,7 +256,7 @@
                 we’ll confirm the details of your issue
                 to ensure a smooth and efficient service experience.
             </p>
-            <button class="see-service-area-btn">See Service Area</button>
+<!--            <button class="see-service-area-btn">See Service Area</button>-->
         </div>
         <div class="about-us-image">
             <img src="assets/images/smart_outlet.png" alt="Dedicated Electrical Services in Los Angeles" />
@@ -240,7 +271,10 @@
             <div class="testimonial-left">
                 <h2>What Our Customers Say</h2>
                 <a href="https://www.yelp.com/writeareview/biz/Ajqh3duu5KIIFc465fuerg?return_url=%2Fbiz%2FAjqh3duu5KIIFc465fuerg&review_origin=biz-details-war-button" target="_blank" rel="noopener noreferrer">
-                    <button class="leave-review-btn">Leave a Review</button>
+                    <button class="leave-review-btn">Leave a Review on Yelp</button>
+                </a><br><br>
+                <a href="https://www.homeadvisor.com/write-a-review/38781038/" target="_blank" rel="noopener noreferrer">
+                    <button class="leave-review-btn">Leave a Review on Home Advisor</button>
                 </a>
             </div>
             <div class="testimonial-right">
@@ -304,6 +338,10 @@
         <p class="footer-note">
             All calls placed to All Service Electrical may be recorded for training purposes.
         </p>
+            <p class="footer-note">
+                Licensed and Insured | License Number: 1081771
+            </p>
+
 
         <!-- Quick Links -->
         <div class="footer-links">

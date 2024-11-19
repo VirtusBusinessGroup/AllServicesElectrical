@@ -14,12 +14,13 @@
 .popup-content {
   background: #c9daf8;
   color: black;
-  width: 50%;
-  margin: 100px auto;
+  width: 70%;
+  margin: 5% auto;
   padding: 20px;
   border-radius: 8px;
   position: relative;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .close-popup {
@@ -74,4 +75,57 @@ button[type="submit"] {
 label[for="service"] {
   font-size: 18px; /* Bigger font size */
   font-weight: bold;
+}
+
+/* Responsive Styling */
+
+/* Tablet Screens (768px and smaller) */
+@media screen and (max-width: 768px) {
+  .popup-content {
+    width: 80%; /* Reduce width */
+    max-width: 600px; /* Remove max-width constraint */
+    margin: 10% auto; /* Adjust margin */
+    padding: 15px; /* Reduce padding */
+  }
+
+  input, select {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .close-popup {
+    font-size: 30px;
+  }
+}
+
+/* Mobile Screens (480px and smaller) */
+@media screen and (max-width: 480px) {
+  .popup-content {
+    width: 90%; /* Use almost full width */
+    margin: 10% auto; /* Adjust margin for mobile */
+    padding: 10px;
+  }
+
+  input, select {
+    width: 95%; /* Full width inputs */
+    font-size: 14px;
+    height: 35px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  label[for="service"] {
+    font-size: 16px;
+  }
+
+  .close-popup {
+    font-size: 24px;
+  }
 }

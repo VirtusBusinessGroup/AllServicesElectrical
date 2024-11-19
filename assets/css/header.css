@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
 header {
     background: rgb(255, 255, 255);
     position: relative;
@@ -149,3 +156,163 @@ header {
     height: 20px;
 }
 
+
+
+/* Responsive Adjustments */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        height: 130px;
+        padding: 10px;
+        position: relative;
+    }
+
+
+    .logo {
+        width: 80px; /* Smaller logo for mobile */
+    }
+
+    .company-name {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Navigation Links */
+    .nav {
+        position: absolute;
+        bottom: 10%; /* Position at the bottom of the header */
+        left: 10%; /* Align to the left */
+    }
+
+    /* Navigation Links */
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        gap: 8px; /* Add spacing between items */
+    }
+
+    .nav ul li {
+        margin-right: 0; /* Add spacing between links */
+    }
+
+    .nav ul li a {
+        color: #3a82f6;
+        text-decoration: none;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu li {
+        font-size: 10px;
+    }
+
+    /* Buttons Container */
+    .header-buttons {
+      position: absolute;
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px; /* Add spacing between buttons */
+      top: 10px; /* Align to the top */
+      right: 20px; /* Align to the right */
+    }
+
+    /* Common button styles */
+    .schedule-btn, .call-now-btn {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Space between icon and text */
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* Button Icon Styling */
+    .button-icon {
+        width: 20px; /* Adjust the icon size */
+        height: 20px;
+    }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        height: 130px;
+        padding: 0;
+        position: relative;
+    }
+
+
+    .logo {
+        width: 80px; /* Smaller logo for mobile */
+    }
+
+    .company-name {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Navigation Links */
+    .nav {
+        position: absolute;
+        bottom: 0; /* Position at the bottom of the header */
+        left: 10%; /* Align to the left */
+    }
+
+    /* Navigation Links */
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        gap: 8px; /* Add spacing between items */
+    }
+
+    .nav ul li {
+        margin-right: 0; /* Add spacing between links */
+    }
+
+    .nav ul li a {
+        color: #3a82f6;
+        text-decoration: none;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu li {
+        font-size: 10px;
+    }
+
+    /* Buttons Container */
+    .header-buttons {
+      position: absolute;
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px; /* Add spacing between buttons */
+      top: 20px; /* Align to the top */
+      right: 30px; /* Align to the right */
+    }
+
+    /* Common button styles */
+    .schedule-btn, .call-now-btn {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Space between icon and text */
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    /* Button Icon Styling */
+    .button-icon {
+        width: 20px; /* Adjust the icon size */
+        height: 20px;
+    }
+
+}

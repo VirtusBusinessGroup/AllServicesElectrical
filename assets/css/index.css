@@ -217,7 +217,7 @@ body {
     flex: 2;
     padding: 20px;
     text-align: left;
-    max-width: 600px;
+    max-width: 80%;
 }
 
 .about-us-content h3 {
@@ -352,43 +352,126 @@ body {
     color: #3a82f6;
 }
 
-/*!* Responsive Design *!*/
-/*@media (max-width: 768px) {*/
-/*    .testimonial-content {*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*    }*/
+/* Adjustments for smaller screens (phones and tablets) */
+@media screen and (max-width: 768px) {
 
-/*    .testimonial-left,*/
-/*    .testimonial-right {*/
-/*        max-width: 100%;*/
-/*    }*/
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    .carousel {
+        height: 250px; /* Reduce height */
+        width: 90%; /* Increase width on smaller screens */
+    }
 
-/*    .testimonial-left h2 {*/
-/*        text-align: center;*/
-/*    }*/
+    .slide {
+        height: 250px; /* Match carousel height */
+        padding: 20px; /* Reduce padding */
+    }
 
-/*    .leave-review-btn {*/
-/*        display: block;*/
-/*        margin: 0 auto 20px;*/
-/*    }*/
-/*}*/
+    .slide h2 {
+        font-size: 16px; /* Reduce font size */
+    }
 
+    .slide p {
+        font-size: 10px; /* Reduce font size */
+    }
 
-/*!* Responsive Design *!*/
-/*@media (max-width: 768px) {*/
-/*    .services-full-width {*/
-/*        flex-direction: column;*/
-/*        text-align: center;*/
-/*    }*/
+    .schedule-btn-window {
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 14px; /* Reduce font size */
+    }
 
-/*    .services-text, .services-icons {*/
-/*        max-width: 100%; !* Stack elements vertically *!*/
-/*    }*/
+    .services-full-width {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center items */
+        padding: 20px 5%;
+    }
 
-/*    .services-icons {*/
-/*        grid-template-columns: 1fr; !* Single column layout for icons *!*/
-/*    }*/
-/*}*/
+    .services-text {
+        max-width: 100%; /* Full width for text */
+        margin-bottom: 20px; /* Add space between sections */
+    }
 
+    .services-icons {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for icons */
+    }
 
+    .promo-section {
+        flex-direction: column; /* Stack promo card and after-hour service vertically */
+        align-items: center;
+        padding: 20px 5%;
+    }
+
+    .after-hour-service {
+        width: 100%; /* Full width */
+    }
+
+    .about-us-section {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-us-image {
+        max-width: 100%; /* Full width */
+    }
+
+    .about-us-content {
+        max-width: 100%; /* Full width for text */
+    }
+
+    .testimonial-content {
+        flex-direction: column; /* Stack testimonial sections vertically */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .testimonial-left,
+    .testimonial-right {
+        max-width: 100%; /* Full width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .carousel {
+        height: 200px; /* Further reduce height for phones */
+    }
+
+    .slide {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .slide h2 {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .slide p {
+        font-size: 10px; /* Reduce font size */
+    }
+
+    .schedule-btn-window {
+        padding: 8px 16px; /* Reduce padding */
+        font-size: 12px; /* Reduce font size */
+    }
+
+    .services-icons {
+        grid-template-columns: 1fr; /* Single column for icons */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .testimonial-quote {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .leave-review-btn {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+}

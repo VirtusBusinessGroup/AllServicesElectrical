@@ -1,0 +1,149 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* General Footer Styling */
+footer {
+    background-color: #f1f1f1; /* Light gray background */
+    padding: 20px 0; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+    font-family: 'Lato', sans-serif; /* Use a clean, modern font */
+    color: #333; /* Dark text for readability */
+    width: 100% !important; /* Full width */
+    margin: 0 !important; /* Remove default margin */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    max-width: 100%; /* Limit the width for readability */
+    margin: 0 auto; /* Center the footer on the page */
+}
+
+/* Logo Section */
+.footer-logo {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    margin-bottom: 15px; /* Add space below the logo */
+}
+
+.footer-logo img {
+    width: 80px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.footer-logo span {
+    font-size: 1.2em; /* Slightly larger text for the name */
+    font-weight: bold;
+    color: #666; /* Light gray text */
+}
+
+/* Address and Contact Info */
+footer p {
+    margin: 5px 0; /* Add spacing between lines */
+    font-size: 0.9em; /* Slightly smaller text for details */
+    line-height: 1.5; /* Improve readability */
+}
+
+.footer-note {
+    font-style: italic; /* Differentiate the training note */
+    font-size: 0.8em;
+    color: #777; /* Lighter gray for the note */
+}
+
+/* Quick Links Section */
+.footer-links {
+    margin: 15px 0; /* Add space above and below links */
+    font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center links horizontally */
+    gap: 10px; /* Add space between links */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: #0073e6; /* Blue links */
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #005bb5; /* Darker blue for hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 20px; /* Add space above the bottom section */
+    font-size: 0.8em; /* Smaller text for bottom details */
+    color: #555; /* Gray text */
+}
+
+.footer-bottom a {
+    color: #0073e6; /* Match link colors */
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 10px; /* Add space above social icons */
+}
+
+.social-icons a {
+    margin: 0 5px; /* Space between icons */
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: auto;
+    /*filter: grayscale(100%); !* Grayscale effect *!*/
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.social-icons img:hover {
+    filter: none; /* Remove grayscale on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Screens (768px and smaller) */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        padding: 10px; /* Adjust padding */
+    }
+    .footer-logo img {
+        width: 70px; /* Reduce logo size for smaller screens */
+    }
+    .footer-links {
+        flex-direction: row; /* Stack links vertically */
+        gap: 5px; /* Reduce gap between links */
+    }
+}
+
+/* Mobile Screens (480px and smaller) */
+@media screen and (max-width: 480px) {
+    .footer-logo img {
+        width: 60px; /* Further reduce logo size */
+    }
+    .footer-logo span {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+    footer p, .footer-bottom {
+        font-size: 0.8em; /* Reduce font size for text */
+    }
+    .footer-links {
+        flex-direction: row; /* Stack links vertically */
+        gap: 5px; /* Reduce gap further */
+    }
+}

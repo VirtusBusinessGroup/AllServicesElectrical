@@ -24,7 +24,8 @@ def home_advisor_reviews(link):
     chrome_options = Options()
     
     # Create a ChromeService object
-    service = webdriver.chrome.service.Service(ChromeDriverManager(driver_version = "131.0.6778.86").install())
+    # service = webdriver.chrome.service.Service(ChromeDriverManager(driver_version = "131.0.6778.86").install())
+    service = webdriver.chrome.service.Service(ChromeDriverManager().install())
     
     # Create a ChromeDriver object
     driver = webdriver.Chrome(service=service, options=chrome_options)

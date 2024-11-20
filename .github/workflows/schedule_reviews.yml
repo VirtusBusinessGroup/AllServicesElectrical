@@ -33,8 +33,8 @@ jobs:
     # Step 5: Install a specific Chrome version
     - name: Install Google Chrome
       run: |
-        wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.86_amd64.deb
-        sudo apt-get install -y ./google-chrome-stable_131.0.6778.86_amd64.deb
+        wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_amd64.deb
+        sudo apt-get install -y ./google-chrome-stable_amd64.deb
 
     - name: Install dependencies for non-headless Chrome
       run: |

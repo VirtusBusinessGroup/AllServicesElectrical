@@ -86,7 +86,9 @@
   <div class="popup-content">
     <button class="close-popup" onclick="closePopup()">×</button>
     <h2>SCHEDULE SERVICE</h2>
-    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/viewform" method="POST">
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
+    target="hidden_iframe"
+    onsubmit="closePopup()">
         <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
         <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
         <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
@@ -95,6 +97,8 @@
         <select id="service" name="entry.720414955">
           <!-- Options will be dynamically inserted here -->
         </select>
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
       <button type="submit">SEND</button>
     </form>
     <p>Form submissions will be answered during normal business hours.<br>
@@ -175,7 +179,9 @@
                 you can rest assured that your home is in safe hands.
                 Contact us today to experience the difference in quality and care!
             </p>
-            <button class="learn-more-btn">LEARN MORE →</button>
+            <a href="assets/html/electrical_services.html">
+                <button class="learn-more-btn">LEARN MORE →</button>
+            </a>
         </div>
         <div class="services-icons">
             <div class="service-item">
@@ -371,9 +377,10 @@
 
 
 
-  <script src="assets/js/windows.js"></script>
-  <script src="assets/js/services-dd.js"></script>
-  <script src="assets/js/schedule_service_form.js"></script>
+    <script src="assets/js/windows.js"></script>
+    <script src="assets/js/services-dd.js"></script>
+    <script src="assets/js/clear-form.js"></script>
+    <script src="assets/js/schedule_service_form.js"></script>
 
 
 </html>

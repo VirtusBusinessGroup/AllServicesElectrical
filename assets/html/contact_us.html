@@ -37,6 +37,7 @@
 <!--    ]-->
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/contact_us.css">
   <link rel="stylesheet" href="../css/schedule_service_form.css">
 
 </head>
@@ -89,7 +90,9 @@
   <div class="popup-content">
     <button class="close-popup" onclick="closePopup()">×</button>
     <h2>SCHEDULE SERVICE</h2>
-    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/viewform" method="POST">
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
+    target="hidden_iframe"
+    onsubmit="closePopup()">
         <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
         <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
         <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
@@ -98,6 +101,8 @@
         <select id="service" name="entry.720414955">
           <!-- Options will be dynamically inserted here -->
         </select>
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
       <button type="submit">SEND</button>
     </form>
     <p>Form submissions will be answered during normal business hours.<br>
@@ -106,8 +111,95 @@
   </div>
 </div>
 
+<section class="electrical-services-title">
+    <!-- Background Image and Title -->
+    <div class="contact-banner">
+        <h2>Contact Us</h2>
+    </div>
 
+</section>
 
+<!-- Static Form -->
+<section class="contact-section">
+  <!-- Left side: Contact Info -->
+  <div class="contact-info">
+    <h2>Expert Electrical Services in Los Angeles – Reliable, Friendly, and Ready to Assist</h2>
+    <p>
+        At All Service Electrical, we pride ourselves
+        on delivering top-notch residential and commercial electrical services across Los Angeles and the surrounding areas.
+        Whether you need electrical repairs, panel upgrades, lighting installations,
+        or have a pressing electrical question, our friendly team is here to help.
+    </p>
+      <p>
+          We’re committed to ensuring your home or business stays powered safely and efficiently.
+          Contact us today for a free consultation or to schedule an appointment with one of our expert electricians.
+      </p>
+    <p>
+<!--      <strong>Vendors & Job Applicants</strong> please contact us at:-->
+<!--      <a href="tel:3103978849">310-397-8849</a>-->
+    </p>
+
+    <div class="contact-details-box">
+      <h3>Let Us Help You Today</h3>
+      <p>📍 11727 W Washington Blvd, Los Angeles, CA 90066</p>
+      <p>📞 <a href="tel:3103978849">310-397-8849</a></p>
+      <p>📧 <a href="mailto:info@virtusbg.com">info@virtusbg.com</a></p>
+      <p>🕒 Mon - Fri 8:00 AM - 6:00 PM</p>
+      <p>🕒 Sat - Sun 8:00 AM - 3:00 PM</p>
+    </div>
+  </div>
+
+  <!-- Right side: Static Schedule Form -->
+  <div class="schedule-form">
+    <h2>SCHEDULE SERVICE</h2>
+    <form
+      id="staticScheduleForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="clearForm(event);"
+    >
+      <input
+        type="text"
+        id="static-name"
+        name="entry.1592039410"
+        placeholder="Name*"
+        required
+      />
+      <input
+        type="email"
+        id="static-email"
+        name="entry.740843060"
+        placeholder="Email*"
+        required
+      />
+      <input
+        type="tel"
+        id="static-phone"
+        name="entry.614905836"
+        placeholder="Phone Number*"
+        required
+      />
+      <input
+        type="text"
+        id="static-address"
+        name="entry.688701368"
+        placeholder="Address*"
+        required
+      />
+      <label for="static-service">Which Service do you need?</label>
+      <select id="static-service" name="entry.720414955"></select>
+
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+        <button type="submit">SEND</button>
+    </form>
+    <p>
+      Form submissions will be answered during normal business hours.<br />
+      For emergencies, call <a href="tel:3103978849">310-397-8849</a>.
+    </p>
+  </div>
+</section>
 
 <footer class="footer">
     <div class="footer-content">
@@ -158,6 +250,10 @@
         </div>
     </div>
 </footer>
+
+<script src="../js/schedule_service_form-secondary.js"></script>
+<script src="../js/services_page.js"></script>
+<script src="../js/clear-form.js"></script>
 
 </body>
 </html>

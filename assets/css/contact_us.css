@@ -1,0 +1,73 @@
+/* Banner Section */
+.contact-banner {
+    /*background-image: url('../images/background-electrical.jpg'); !* Replace with your image path *!*/
+    background-size: cover;
+    background-position: center;
+    background-color: #3a82f6; /* Optional fallback color */
+    background-blend-mode: overlay;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.contact-banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
+/* Contact Section Layout */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+    text-align: center;
+}
+
+.contact-details-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #c9daf8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 10%;
+}
+
+.contact-info,
+.schedule-form {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+    text-align: center;
+}
+
+.schedule-form input, .schedule-form select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 16px; /* Match font size */
+  height: 40px; /* Match height for consistency */
+}
+
+/*.schedule-popup {*/
+/*  display: none; !* Keep the popup hidden by default *!*/
+/*}*/

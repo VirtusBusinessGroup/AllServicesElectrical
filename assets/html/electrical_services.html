@@ -88,7 +88,9 @@
   <div class="popup-content">
     <button class="close-popup" onclick="closePopup()">×</button>
     <h2>SCHEDULE SERVICE</h2>
-    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/viewform" method="POST">
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
+    target="hidden_iframe"
+    onsubmit="closePopup()">
         <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
         <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
         <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
@@ -97,6 +99,8 @@
         <select id="service" name="entry.720414955">
           <!-- Options will be dynamically inserted here -->
         </select>
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
       <button type="submit">SEND</button>
     </form>
     <p>Form submissions will be answered during normal business hours.<br>
@@ -104,7 +108,6 @@
     </p>
   </div>
 </div>
-
 <section class="electrical-services-title">
     <!-- Background Image and Title -->
     <div class="services-banner">
@@ -119,7 +122,7 @@
             No matter how complex the electrical problem, the professionals at All Service Electrical will be there to help you out!
             Get in touch with us today by calling <a href="tel:3103978849">310-397-8849</a> or schedule a service with us on our website.
         </p>
-        <button class="schedule-service-btn">Schedule Service</button>
+        <button class="schedule-service-btn" onclick="openPopup()">Schedule Service</button>
     </div>
 </section>
 
@@ -143,13 +146,51 @@
     </div>
 </section>
 
+<section id="problems-section">
+    <div class="electric-content-problems">
+        <h3>Have an Electrical Problem? Contact All Service Electrical!</h3>
+        <h4>Early Signs of Electrical Problems</h4>
+        <p>
+            If you notice an electrical problem, it’s best to consult an electrician early on.
+            Here are some early signs of electrical problems you should be aware of:
+        </p>
+        <ul>
+            <li>Lights flickering or dimming when using bigger or multiple appliances</li>
+            <li>Discolored or scorched outlets</li>
+            <li>Frayed, chewed, or exposed wiring</li>
+            <li>Loosened outlets</li>
+            <li>Fixtures that easily heat up</li>
+            <li>Circuit breaker tripping repeatedly</li>
+        </ul>
+    </div>
+</section>
 
 <section id="services-section">
     <h2>We Offer a Multitude of Electrical Services!</h2>
     <p>
-        No matter how complicated the electrical problem, the pros at All Service Electrical will be there to diagnose and troubleshoot it in no time. Here are all the electrical services we offer:
+        No matter how complex your electrical problem may be, the skilled professionals at All Service Electrical are
+        ready to diagnose and resolve it with precision and efficiency.
+        Our team is committed to providing top-quality solutions tailored to your specific needs.
     </p>
     <ul id="services-list"></ul>
+
+    <br>
+    <p>
+        If you’re in need of professional electrical services
+        or are unsure about the specific service your property requires,
+        don’t hesitate to contact the experts at All Service Electrical today!
+
+        Ignoring electrical issues can lead to significant safety hazards,
+        increased repair costs, and potential damage to your property.
+        Our team of licensed, bonded,
+        and insured electricians is equipped with the latest tools and expertise
+        to resolve any electrical problem,
+        no matter the size or complexity.
+
+        Don’t wait until minor electrical issues become major problems!
+        Call us now at 310-397-8849 or schedule a service online to experience the All Service Electrical difference.
+        Your safety and satisfaction are our top priorities.
+    </p>
 </section>
 
 

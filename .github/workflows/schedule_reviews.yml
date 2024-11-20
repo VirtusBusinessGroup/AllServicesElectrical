@@ -1,0 +1,64 @@
+name: Weekly Review Scraper
+
+on:
+  schedule:
+    - cron: '1 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  scrape-reviews:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # Step 4: Install Xvfb
+    - name: Install Xvfb
+      run: sudo apt-get install -y xvfb
+
+    # Step 5: Install a specific Chrome version
+    - name: Install Google Chrome
+      run: |
+        wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.86_amd64.deb
+        sudo apt-get install -y ./google-chrome-stable_131.0.6778.86_amd64.deb
+
+    # Step 6: Start Xvfb
+    - name: Start Xvfb
+      run: |
+        Xvfb :99 -screen 0 1920x1080x24 &
+        export DISPLAY=:99
+
+    # Step 7: Run the Python script
+    - name: Run Review Scraper
+      env:
+        DISPLAY: ":99"
+      run: python scripts/collect_reviews.py
+
+    # Step 8: Commit and push the changes
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+        # Add the file(s) you created or modified
+        git add assets/data/home_advisor_reviews.csv
+
+        # Commit the changes
+        git commit -m "Automated reviews update $(date)"
+
+        # Push the changes to the repository
+        git push origin main  # Replace "main" with your branch if it's different

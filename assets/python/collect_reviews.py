@@ -104,7 +104,7 @@ def home_advisor_reviews(link):
     review_data = review_data.sort_values(["Rating", "Date"], ascending=[False, False]).reset_index(drop=True)
     
     # Save the reviews to a csv file
-    review_data.to_csv("../data/home_advisor_reviews.csv", index=False)
+    review_data.to_csv("assets/data/home_advisor_reviews.csv", index=False)
 
 
 home_advisor_reviews(HOME_ADVISOR)

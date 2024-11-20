@@ -52,7 +52,7 @@ jobs:
     - name: Run Review Scraper
       env:
         DISPLAY: ":99"
-      run: python scripts/collect_reviews.py
+      run: python assets/python/collect_reviews.py
 
     # Step 8: Commit and push the changes
     - name: Commit and Push Changes

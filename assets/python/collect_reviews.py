@@ -35,15 +35,16 @@ def home_advisor_reviews(link):
     
     # Wait for the page to load
     time.sleep(2)
-
-    # Get the html of the page
-    page = driver.page_source
-    
-    # Parse the html using BeautifulSoup
-    soup = BeautifulSoup(page, "html.parser")
     
     # Run a loop to get all the reviews
     while True:
+        
+        # Get the html of the page
+        page = driver.page_source
+        
+        # Parse the html using BeautifulSoup
+        soup = BeautifulSoup(page, "html.parser")
+        
         # Get the div that has an id of "reviews"
         reviews = soup.find("div", {"id": "reviews"})
         
@@ -98,12 +99,16 @@ def home_advisor_reviews(link):
         next_button.click()
         
         # Wait for the page to load
-        time.sleep(2)
+        time.sleep(3)
     
     # Sort the reviews by Rating and by Date
     review_data = review_data.sort_values(["Rating", "Date"], ascending=[False, False]).reset_index(drop=True)
     
+    # Drop duplicates of Name and Date, keep the first
+    review_data = review_data.drop_duplicates(subset=["Name", "Date"], keep="first").reset_index(drop=True)
+    
     # Save the reviews to a csv file
+    # review_data.to_csv("../data/home_advisor_reviews.csv", index=False)
     review_data.to_csv("assets/data/home_advisor_reviews.csv", index=False)
 
 

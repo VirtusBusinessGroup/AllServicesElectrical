@@ -297,7 +297,7 @@ header {
       flex-direction: column; /* Stack buttons vertically */
       gap: 10px; /* Add spacing between buttons */
       top: 20px; /* Align to the top */
-      right: 30px; /* Align to the right */
+      right: 20px; /* Align to the right */
     }
 
     /* Common button styles */
@@ -305,14 +305,14 @@ header {
         display: flex;
         align-items: center;
         gap: 5px; /* Space between icon and text */
-        font-size: 10px;
-        padding: 6px 12px;
+        font-size: 8px;
+        padding: 5px 10px;
     }
 
     /* Button Icon Styling */
     .button-icon {
-        width: 20px; /* Adjust the icon size */
-        height: 20px;
+        width: 10px; /* Adjust the icon size */
+        height: 10px;
     }
 
 }

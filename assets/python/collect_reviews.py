@@ -100,6 +100,9 @@ def home_advisor_reviews(link):
         
         # Wait for the page to load
         time.sleep(3)
+        
+    # Format the Date column
+    review_data["Date"] = pd.to_datetime(review_data["Date"])
     
     # Sort the reviews by Rating and by Date
     review_data = review_data.sort_values(["Rating", "Date"], ascending=[False, False]).reset_index(drop=True)

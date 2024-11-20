@@ -68,6 +68,53 @@
   height: 40px; /* Match height for consistency */
 }
 
-/*.schedule-popup {*/
-/*  display: none; !* Keep the popup hidden by default *!*/
-/*}*/
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .contact-info,
+    .contact-details-box,
+    .schedule-form {
+        flex: 1 1 auto; /* Allow sections to take full width */
+        margin-top: 0; /* Remove additional margin */
+    }
+
+    .schedule-form input,
+    .schedule-form select {
+        width: 90%; /* Increase width for better usability */
+    }
+
+    .contact-banner h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 10px; /* Compact padding */
+    }
+
+    .contact-info,
+    .contact-details-box,
+    .schedule-form {
+        padding: 15px; /* Compact padding for content boxes */
+    }
+
+    .contact-banner h2 {
+        font-size: 24px; /* Smaller font for headlines */
+    }
+
+    .schedule-form input,
+    .schedule-form select {
+        width: 100%; /* Full width for mobile */
+        font-size: 14px; /* Slightly smaller text */
+    }
+
+    .schedule-form h2 {
+        font-size: 20px; /* Adjust form title size */
+    }
+}

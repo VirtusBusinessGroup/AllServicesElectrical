@@ -45,3 +45,68 @@
     font-size: 12px;
     color: #666;
 }
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .reviews-container {
+        padding: 15px; /* Reduce padding for smaller screens */
+        max-width: 90%; /* Flexible width */
+    }
+
+    .review-card {
+        padding: 12px; /* Adjust padding */
+        margin: 10px 0; /* Reduce margin */
+    }
+
+    .review-card h3 {
+        font-size: 16px; /* Adjust headline size */
+    }
+
+    .review-location,
+    .review-service {
+        font-size: 14px; /* Smaller text */
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .review-date {
+        font-size: 11px; /* Reduce size for dates */
+    }
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+    .reviews-container {
+        padding: 10px; /* Minimal padding for mobile */
+        max-width: 100%;
+    }
+
+    .review-card {
+        padding: 10px; /* Compact padding */
+        margin: 8px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .review-card h3 {
+        font-size: 14px; /* Smaller headline */
+    }
+
+    .review-location,
+    .review-service {
+        font-size: 12px; /* Compact text */
+    }
+
+    .review-text {
+        font-size: 12px;
+    }
+
+    .review-rating {
+        font-size: 14px; /* Keep ratings prominent */
+    }
+
+    .review-date {
+        font-size: 10px; /* Smallest size for dates */
+    }
+}

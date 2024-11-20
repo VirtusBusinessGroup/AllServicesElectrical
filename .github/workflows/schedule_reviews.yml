@@ -55,11 +55,13 @@ jobs:
       run: python assets/python/collect_reviews.py
 
     # Step 8: Commit and push the changes
+    - name: Set git user name and email
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
     - name: Commit and Push Changes
       run: |
-        git config --global chavezpe "github-actions[bot]"
-        git config --global angelc.1534@gmail.com "angelc.1534@gmail.com"
-
         # Add the file(s) you created or modified
         git add assets/data/home_advisor_reviews.csv
 

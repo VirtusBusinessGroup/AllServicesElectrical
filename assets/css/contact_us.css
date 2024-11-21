@@ -1,9 +1,13 @@
+* {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
 /* Banner Section */
 .contact-banner {
     /*background-image: url('../images/background-electrical.jpg'); !* Replace with your image path *!*/
     background-size: cover;
     background-position: center;
-    background-color: #3a82f6; /* Optional fallback color */
+    background-color: #14356b; /* Optional fallback color */
     background-blend-mode: overlay;
     color: #fff;
     padding: 80px 0;

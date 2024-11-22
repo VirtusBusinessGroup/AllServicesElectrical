@@ -273,7 +273,7 @@ header {
         display: flex;
         position: absolute;
         bottom: 10px;
-        gap: 8px; /* Add spacing between items */
+        gap: 30px; /* Add spacing between items */
     }
 
     .nav ul li {

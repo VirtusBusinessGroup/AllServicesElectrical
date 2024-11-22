@@ -295,9 +295,9 @@ header {
     .header-buttons {
       position: absolute;
       display: flex;
-      flex-direction: column; /* Stack buttons vertically */
+      flex-direction: row; /* Stack buttons vertically */
       gap: 10px; /* Add spacing between buttons */
-      top: 20px; /* Align to the top */
+      top: 70px; /* Align to the top */
       right: 10px; /* Align to the right */
     }
 

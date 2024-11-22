@@ -274,4 +274,14 @@
     #problems-section .electric-content-problems h4 {
         font-size: 16px;
     }
+
+    /* Align lists to the left on mobile */
+    ul {
+        text-align: left;
+        padding-left: 20px; /* Optional: Add consistent padding for better alignment */
+    }
+
+    li {
+        text-align: left; /* Ensure list items are aligned */
+    }
 }

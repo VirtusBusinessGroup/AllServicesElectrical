@@ -1,3 +1,7 @@
+* {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
 body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -78,7 +82,7 @@ body {
 }
 
 .services-text h2 {
-    color: #3a82f6; /* Red heading color */
+    color: #14356b; /* Red heading color */
     font-size: 24px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -132,7 +136,7 @@ body {
 
 .service-item h3 {
     font-size: 14px;
-    color: #3a82f6; /* Red text color */
+    color: #14356b; /* Red text color */
     text-transform: uppercase;
 }
 
@@ -222,7 +226,7 @@ body {
 
 .about-us-content h3 {
     font-size: 28px;
-    color: #3a82f6; /* Blue color */
+    color: #14356b; /* Blue color */
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -344,7 +348,7 @@ body {
 
 .quote-icon {
     font-size: 50px;
-    color: #3a82f6;
+    color: #14356b;
     position: absolute;
     top: -10px;
     left: 0;
@@ -353,7 +357,7 @@ body {
 .testimonial-author {
     margin-top: 15px;
     font-weight: bold;
-    color: #3a82f6;
+    color: #14356b;
 }
 
 /* Adjustments for smaller screens (phones and tablets) */

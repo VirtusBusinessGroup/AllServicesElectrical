@@ -1,3 +1,7 @@
+* {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -6,10 +10,10 @@ html, body {
 
 /* General Footer Styling */
 footer {
-    background-color: #f1f1f1; /* Light gray background */
+    background-color: #dddddd; /* Light gray background */
     padding: 20px 0; /* Add padding for spacing */
     text-align: center; /* Center the text */
-    font-family: 'Lato', sans-serif; /* Use a clean, modern font */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Change to desired font */
     color: #333; /* Dark text for readability */
     width: 100% !important; /* Full width */
     margin: 0 !important; /* Remove default margin */
@@ -69,13 +73,13 @@ footer p {
 
 .footer-links a {
     text-decoration: none; /* Remove underline */
-    color: #0073e6; /* Blue links */
+    color: #14356b; /* Blue links */
     font-weight: 500;
 }
 
 .footer-links a:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #005bb5; /* Darker blue for hover */
+    color: #14356b; /* Darker blue for hover */
 }
 
 /* Footer Bottom Section */
@@ -86,7 +90,7 @@ footer p {
 }
 
 .footer-bottom a {
-    color: #0073e6; /* Match link colors */
+    color: #14356b; /* Match link colors */
     text-decoration: none;
 }
 

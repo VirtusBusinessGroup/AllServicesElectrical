@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     width: 100%;
+    font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
 header {
@@ -30,7 +31,7 @@ header {
 .company-name {
     font-size: 32px; /* Big text for company name */
     font-weight: bold;
-    color: #3a82f6; /* Use the primary blue color */
+    color: #14356b; /* Use the primary blue color */
 }
 
 /* Navigation Links */
@@ -58,7 +59,7 @@ header {
 }
 
 .nav ul li a {
-    color: #3a82f6;
+    color: #14356b;
     text-decoration: none;
     font-size: 20px;
     white-space: nowrap;
@@ -69,7 +70,7 @@ header {
     display: none;
     position: absolute;
     background: white;
-    color: #3a82f6;
+    color: #14356b;
     top: 100%; /* Position dropdown below parent */
     left: 0;
     min-width: 200px;
@@ -202,7 +203,7 @@ header {
     }
 
     .nav ul li a {
-        color: #3a82f6;
+        color: #14356b;
         text-decoration: none;
         font-size: 14px;
         white-space: nowrap;
@@ -280,7 +281,7 @@ header {
     }
 
     .nav ul li a {
-        color: #3a82f6;
+        color: #14356b;
         text-decoration: none;
         font-size: 10px;
         white-space: nowrap;

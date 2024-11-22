@@ -1,3 +1,7 @@
+* {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
 /* Popup Container */
 .schedule-popup {
   display: none; /* Hidden by default */

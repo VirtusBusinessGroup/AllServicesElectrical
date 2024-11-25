@@ -66,11 +66,13 @@ jobs:
         # Add the file(s) you created or modified
         git add assets/data/home_advisor_reviews.csv
 
-        # Commit the changes
-        git commit -m "Automated reviews update $(date)"
-
-        # Push the changes to the repository
-        git push origin main  # Replace "main" with your branch if it's different
+        # Check if there are staged changes to commit
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Automated reviews update $(date)"
+          git push origin main  # Replace "main" with your branch if it's different
+        fi
         
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

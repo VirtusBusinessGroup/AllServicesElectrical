@@ -211,10 +211,12 @@ body {
 }
 
 .about-us-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for the image */
+    /*max-width: 140%;*/
+    margin-top: 60px;
+    width: 70%;
+    /*height: auto;*/
+    border-radius: 20px; /* Rounded corners for the image */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Optional: Shadow for the image *!*/
 }
 
 .about-us-content {

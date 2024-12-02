@@ -62,7 +62,7 @@
             <ul>
                 <li><a href="../../index.html#about-us-section" title="Learn about our electricians">ABOUT</a></li>
                 <li class="dropdown">
-                    <a href="electrical_services.html" title="Explore our electrical services">ELECTRICAL SERVICES</a>
+                    <a href="electrical_services.html" title="Explore our electrical services">SERVICES</a>
                     <ul id="services-dropdown" class="dropdown-menu"></ul>
                 </li>
                 <li><a href="reviews.html" title="Read customer reviews">REVIEWS</a></li>
@@ -96,10 +96,7 @@
         <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
         <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
         <input type="text" id="address" name="entry.688701368" placeholder="Address*" required>
-        <label for="service">Which Service do you need?</label>
-        <select id="service" name="entry.720414955">
-          <!-- Options will be dynamically inserted here -->
-        </select>
+        <input type="text" id="service" name="entry.720414955" placeholder="Which services do you need?">
         <!-- Invisible iframe for handling form submission without redirecting the user -->
         <iframe name="hidden_iframe" style="display:none;"></iframe>
       <button type="submit">SEND</button>
@@ -109,6 +106,7 @@
     </p>
   </div>
 </div>
+
 <section class="electrical-services-title">
     <!-- Background Image and Title -->
     <div class="services-banner">
@@ -199,51 +197,34 @@
 
 <footer class="footer">
     <div class="footer-content">
-        <!-- Logo and Company Information -->
+        <!-- Logo and Company Information (Left) -->
         <div class="footer-logo">
             <a href="../../index.html">
                 <img src="../images/logo.jpg" alt="Logo" class="logo">
             </a>
-            <span>All Services Electrical</span>
+            <div class="logo-text">
+                <span>All Services Electrical</span>
+                <p>11727 W Washington Blvd Ste D, <br /> Los Angeles, CA 90066</p>
+                <p><a href="tel:3103978849">310-397-8849</a></p>
+                <p class="footer-note">Licensed and Insured | License Number: 1081771</p>
+            </div>
         </div>
-        <p>
-            11727 W Washington Blvd Ste D, <br />
-            Los Angeles, CA 90066
-        </p>
-        <p>
-            📞 <a href="tel:3103978849">310-397-8849</a>
-        </p>
-        <p class="footer-note">
-            All calls placed to All Services Electrical may be recorded for training purposes.
-        </p>
-            <p class="footer-note">
-                Licensed and Insured | License Number: 1081771
-            </p>
 
-
-        <!-- Quick Links -->
+        <!-- Quick Links (Right) -->
         <div class="footer-links">
-            <a href="../../index.html#about-us-section">About</a> |
-            <a href="electrical_services.html">Electrical Services</a> |
-<!--            <a href="#">Service Area</a> |-->
-            <a href="reviews.html">Reviews</a> |
-<!--            <a href="#">Coupons</a> |-->
-            <a href="contact_us.html">Contact Us</a> |
-<!--            <a href="#">Privacy Policy</a>-->
+            <a href="../../index.html#about-us-section">About</a>
+            <a href="electrical_services.html">Electrical Services</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact_us.html">Contact</a>
         </div>
+    </div>
 
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-            <p>© 2024, All Services Electrical, All Rights Reserved</p>
-            <p>
-                Built by <a href="https://virtusbg.com" target="_blank" rel="noopener noreferrer">Virtus Business Group</a>
-            </p>
-<!--            <div class="social-icons">-->
-<!--                <a href="#"><img src="assets/images/facebook.png" alt="Facebook" /></a>-->
-<!--                <a href="#"><img src="assets/images/twitter.png" alt="Twitter" /></a>-->
-<!--                <a href="#"><img src="assets/images/youtube.png" alt="YouTube" /></a>-->
-<!--            </div>-->
-        </div>
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>© 2024, All Services Electrical, All Rights Reserved</p>
+        <p>
+            Built by <a href="https://virtusbg.com" target="_blank" rel="noopener noreferrer">Virtus Business Group</a>
+        </p>
     </div>
 </footer>
 

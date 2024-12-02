@@ -1,5 +1,5 @@
 * {
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html, body {
@@ -10,65 +10,59 @@ html, body {
 
 /* General Footer Styling */
 footer {
-    background-color: #dddddd; /* Light gray background */
+    background-color: #f4f4f4; /* Light gray background */
     padding: 20px 0; /* Add padding for spacing */
-    text-align: center; /* Center the text */
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Change to desired font */
     color: #333; /* Dark text for readability */
-    width: 100% !important; /* Full width */
-    margin: 0 !important; /* Remove default margin */
+    width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding in width */
 }
 
-/* Footer Content Layout */
 .footer-content {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    max-width: 100%; /* Limit the width for readability */
-    margin: 0 auto; /* Center the footer on the page */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: flex-start; /* Align items at the top */
+    max-width: 1200px; /* Limit footer width for readability */
+    margin: 0 auto; /* Center the footer */
+    padding: 20px; /* Add padding inside */
 }
 
-/* Logo Section */
+/* Adjusted Logo Section */
 .footer-logo {
-    display: flex;
-    align-items: center; /* Align logo and text vertically */
-    margin-bottom: 15px; /* Add space below the logo */
+    display: flex; /* Make logo and text sit next to each other */
+    align-items: center; /* Align items vertically in the center */
+    gap: 15px; /* Space between logo and text */
+    max-width: 50%; /* Limit width to half the footer */
 }
 
 .footer-logo img {
     width: 80px; /* Adjust logo size */
     height: auto;
-    margin-right: 10px; /* Space between logo and text */
 }
 
-.footer-logo span {
-    font-size: 1.2em; /* Slightly larger text for the name */
-    font-weight: bold;
-    color: #666; /* Light gray text */
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack company name and details */
+    gap: 5px; /* Reduce space between lines */
 }
 
-/* Address and Contact Info */
-footer p {
-    margin: 5px 0; /* Add spacing between lines */
-    font-size: 0.9em; /* Slightly smaller text for details */
-    line-height: 1.5; /* Improve readability */
+.logo-text span {
+    font-size: 1.2rem; /* Slightly larger for the company name */
+    font-weight: bold; /* Make it stand out */
 }
 
-.footer-note {
-    font-style: italic; /* Differentiate the training note */
-    font-size: 0.8em;
-    color: #777; /* Lighter gray for the note */
+.logo-text p {
+    margin: 0; /* Remove extra spacing around text */
+    font-size: 0.9rem; /* Adjust text size */
 }
 
 /* Quick Links Section */
 .footer-links {
-    margin: 15px 0; /* Add space above and below links */
-    font-size: 0.9em;
     display: flex;
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    justify-content: center; /* Center links horizontally */
-    gap: 10px; /* Add space between links */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Add spacing between links */
+    text-align: right; /* Align links to the right */
+    max-width: 40%; /* Limit width to 40% */
 }
 
 .footer-links a {
@@ -79,14 +73,14 @@ footer p {
 
 .footer-links a:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #14356b; /* Darker blue for hover */
 }
 
 /* Footer Bottom Section */
 .footer-bottom {
-    margin-top: 20px; /* Add space above the bottom section */
     font-size: 0.8em; /* Smaller text for bottom details */
     color: #555; /* Gray text */
+    text-align: center;
+    margin-top: 20px; /* Add space above bottom section */
 }
 
 .footer-bottom a {
@@ -98,25 +92,11 @@ footer p {
     text-decoration: underline;
 }
 
-/* Social Media Icons */
-.social-icons {
-    margin-top: 10px; /* Add space above social icons */
-}
-
-.social-icons a {
-    margin: 0 5px; /* Space between icons */
-    display: inline-block;
-}
-
-.social-icons img {
-    width: 24px; /* Icon size */
-    height: auto;
-    /*filter: grayscale(100%); !* Grayscale effect *!*/
-    transition: filter 0.3s ease; /* Smooth transition */
-}
-
-.social-icons img:hover {
-    filter: none; /* Remove grayscale on hover */
+.footer-note {
+    font-size: 0.8em; /* Smaller text for note */
+    color: #555; /* Gray text */
+    text-align: center;
+    margin-top: 10px; /* Add space above note */
 }
 
 /* Media Queries for Responsiveness */

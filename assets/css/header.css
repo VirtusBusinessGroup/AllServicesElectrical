@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     width: 100%;
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -38,7 +38,8 @@ header {
 .nav {
     position: absolute;
     bottom: 0; /* Position at the bottom of the header */
-    left: 25%; /* Align to the left */
+    left: 5%; /* Align to the left */
+    /*align-items: center;*/
 }
 
 /* Navigation Links */
@@ -54,7 +55,7 @@ header {
 }
 
 .nav ul li {
-    margin-right: 20px; /* Add spacing between links */
+    margin-right: 80px; /* Add spacing between links */
     position: relative;
 }
 

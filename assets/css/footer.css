@@ -104,30 +104,53 @@ footer {
 /* Tablet Screens (768px and smaller) */
 @media screen and (max-width: 768px) {
     .footer-content {
-        padding: 10px; /* Adjust padding */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align content */
+        padding: 5px; /* Adjust padding for spacing */
+        text-align: center; /* Center text for better alignment */
+    }
+    .footer-logo {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center;
     }
     .footer-logo img {
-        width: 70px; /* Reduce logo size for smaller screens */
+        width: 70px; /* Adjust logo size */
+    }
+    .footer-logo span {
+        font-size: 1.2em; /* Slightly larger text for readability */
     }
     .footer-links {
-        flex-direction: row; /* Stack links vertically */
-        gap: 5px; /* Reduce gap between links */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        gap: 10px; /* Maintain spacing between links */
+        text-align: center;
+        margin-top: 10px; /* Add space above links */
     }
 }
 
 /* Mobile Screens (480px and smaller) */
 @media screen and (max-width: 480px) {
+    .footer-content {
+        padding: 10px; /* Smaller padding for compact design */
+    }
     .footer-logo img {
         width: 60px; /* Further reduce logo size */
     }
     .footer-logo span {
-        font-size: 1em; /* Adjust font size for mobile */
+        font-size: 1em; /* Adjust text size for smaller screens */
     }
-    footer p, .footer-bottom {
-        font-size: 0.8em; /* Reduce font size for text */
+    .footer-logo p {
+        font-size: 0.8em; /* Reduce font size of address and phone number */
+        margin: 5px 0; /* Reduce spacing between text elements */
     }
     .footer-links {
-        flex-direction: row; /* Stack links vertically */
-        gap: 5px; /* Reduce gap further */
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px; /* Reduce gap between links */
+    }
+    .footer-bottom {
+        font-size: 0.7em; /* Adjust font size for small screens */
+        /*padding-top: 4px; !* Add spacing above the footer bottom *!*/
+        margin-top: 10px; /* Adjust margin for better spacing */
     }
 }
+

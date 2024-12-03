@@ -146,23 +146,34 @@ body {
     justify-items: center; /* Center icons in their section */
     text-align: center;
     width: 100%;
+    padding: 20px;
 }
 
 .service-item {
+    background-color: #f9f9f9; /* Light background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 100%;
+    max-width: 200px; /* Limit card width */
     text-align: center;
-    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item img {
-    width: 60px; /* Icon size */
-    height: 60px;
-    margin-bottom: 10px;
+    width: 80px; /* Adjust icon size */
+    margin-bottom: 10px; /* Space between icon and text */
 }
 
 .service-item h3 {
-    font-size: 14px;
-    color: #14356b; /* Red text color */
-    text-transform: uppercase;
+    font-size: 18px;
+    margin: 10px 0 0;
+    color: #14356b; /* Text color */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Promo Section */

@@ -85,6 +85,7 @@
     font-family: 'Open Sans', sans-serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    /*background-color: #e8f3ff;*/
 }
 
 .mid-info::before {
@@ -95,8 +96,10 @@
     right: 0;
     bottom: 0;
     background-image: url('../images/ripped-wires.jpg');
-    background-size: cover;
-    background-position: center -180px;
+    background-color: #e8f3ff;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -1; /* Places the image behind the text */
     border-radius: 10px; /* Matches the parent container */
     opacity: 0.5; /* Adjust for desired transparency (0 = fully transparent, 1 = fully opaque) */
@@ -198,7 +201,7 @@
     position: relative; /* Needed for pseudo-element positioning */
     margin: 30px 400px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #e8f3ff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Open Sans', sans-serif;
@@ -324,4 +327,25 @@
         font-size: 12px; /* Adjust font size */
         text-align: left; /* Ensure list items are aligned */
     }
+
+    #services-section {
+        background-color: #e8f3ff;
+    }
+
+    #services-section::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/ripped-wires.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleX(-1); /* Mirrors the background image */
+    border-radius: 10px; /* Matches the parent section */
+    z-index: -1; /* Places the image behind the text */
+    opacity: 0.5; /* Adjust the opacity for better readability */
+}
 }

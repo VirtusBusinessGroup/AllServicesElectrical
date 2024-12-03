@@ -87,7 +87,7 @@
 @media (max-width: 768px) {
     .contact-banner {
         background-position: center -120px;
-        padding: 60px;
+        padding: 78px 10px;
     }
 
     .contact-section {

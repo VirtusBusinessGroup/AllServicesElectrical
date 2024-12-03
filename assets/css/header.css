@@ -121,7 +121,7 @@ header {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    background: #ff9800;
+    background: #ff8f11;
     color: #ffffff;
     border: none;
     padding: 8px 16px;
@@ -134,7 +134,7 @@ header {
 
 /* Schedule Service Button */
 .schedule-btn {
-    background: #28a745;
+    background: #ff8f11;
     color: white;
     border: none;
     padding: 10px 20px;

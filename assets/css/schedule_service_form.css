@@ -64,8 +64,8 @@ form p a {
 
 /* Submit Button */
 button[type="submit"] {
-  background: #ffcc00;
-  color: #000;
+  background: #ff8f11;
+  color: #ffffff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;

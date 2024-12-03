@@ -4,13 +4,13 @@
 
 /* Banner Section */
 .contact-banner {
-    /*background-image: url('../images/background-electrical.jpg'); !* Replace with your image path *!*/
-    background-size: cover;
-    background-position: center;
-    background-color: #14356b; /* Optional fallback color */
+    background-image: url('../images/wiring.jpg'); /* Replace with your image path */
+    background-size: 100%; /* Match background size with other pages */
+    background-position: center -460px; /* Match position with other banners */
+    background-color: rgba(20, 53, 107, 0.6); /* Optional fallback color */
     background-blend-mode: overlay;
     color: #fff;
-    padding: 80px 0;
+    padding: 80px 0; /* Standardized padding to reduce height */
 }
 
 .contact-banner h2 {
@@ -85,6 +85,11 @@
 
 /* Responsive Adjustments for Tablets */
 @media (max-width: 768px) {
+    .contact-banner {
+        background-position: center -120px;
+        padding: 60px;
+    }
+
     .contact-section {
         flex-direction: column; /* Stack items vertically */
         gap: 15px; /* Reduce gap */
@@ -109,6 +114,12 @@
 
 /* Responsive Adjustments for Mobile */
 @media (max-width: 480px) {
+    .contact-banner {
+        background-position: center -100px;
+        background-size: 100%; /* Consistent with tablet and desktop */
+        padding: 38px 10px;
+    }
+
     .contact-section {
         padding: 10px; /* Compact padding */
     }

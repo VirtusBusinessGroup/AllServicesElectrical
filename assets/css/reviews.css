@@ -2,6 +2,25 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Banner Section */
+.services-banner {
+    background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
+    background-size: 100%;
+    background-position: center -400px;
+    background-color: rgba(20, 53, 107, 0.6); /* Optional fallback color */
+    background-blend-mode: overlay;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.services-banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
 .reviews-container {
     padding: 20px;
     max-width: 800px;
@@ -41,7 +60,7 @@
 }
 
 .review-rating {
-    color: #ff9800;
+    color: #ff8f11;
     font-weight: bold;
 }
 
@@ -52,6 +71,13 @@
 
 /* Responsive Adjustments for Tablets */
 @media (max-width: 768px) {
+    .services-banner {
+        background-position: center -100px;
+    }
+
+    .services-banner h2 {
+        font-size: 24px;
+    }
     .reviews-container {
         padding: 15px; /* Reduce padding for smaller screens */
         max-width: 90%; /* Flexible width */
@@ -82,6 +108,14 @@
 
 /* Responsive Adjustments for Mobile */
 @media (max-width: 480px) {
+    .services-banner {
+        padding: 40px 10px; /* Reduce padding */
+    }
+
+    .services-banner h2 {
+        font-size: 20px; /* Smaller headline */
+    }
+
     .reviews-container {
         padding: 10px; /* Minimal padding for mobile */
         max-width: 100%;
@@ -114,3 +148,48 @@
         font-size: 10px; /* Smallest size for dates */
     }
 }
+
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+
+
+    .schedule-service-btn {
+        font-size: 12px; /* Adjust font for buttons */
+        padding: 8px 10px;
+    }
+
+    .mid-info, .services-content, #problems-section, #services-section {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px; /* Add padding for spacing */
+        margin: 10px auto; /* Center with smaller margins */
+        width: 90%; /* Ensure a consistent width */
+    }
+
+    .electric-content {
+        text-align: center; /* Center-align the text */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .services-content p,
+    #services-section p {
+        font-size: 12px;
+    }
+
+    #problems-section .electric-content-problems h3,
+    #problems-section .electric-content-problems h4 {
+        font-size: 16px;
+    }
+
+    /* Align lists to the left on mobile */
+    ul {
+        text-align: left;
+        padding-left: 20px; /* Optional: Add consistent padding for better alignment */
+    }
+
+    li {
+        font-size: 12px; /* Adjust font size */
+        text-align: left; /* Ensure list items are aligned */
+    }
+}
+

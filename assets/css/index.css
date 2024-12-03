@@ -25,27 +25,51 @@ body {
 }
 
 .slide {
+    position: relative; /* To allow positioning of the pseudo-element */
     min-width: 100%;
     height: 350px;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    background: #c9daf8;
+    background-image: url('../images/light-pendulum.jpg');
+    background-size: cover;
+    background-position: center -250px; /* Moves the image 200px up */
     padding: 40px; /* Add space inside the slide */
     box-sizing: border-box; /* Include padding in width/height */
     text-align: center;
     flex: 0 0 100%; /* Prevent shrinking or overflowing */
     width: 100%;
+    overflow: hidden; /* Ensure no overflow from pseudo-element */
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with 50% transparency */
+    z-index: 1; /* Position the overlay behind the text */
+}
+
+.slide > * {
+    position: relative;
+    z-index: 2; /* Position content above the overlay */
 }
 
 .slide p {
     font-size: 18px;
+    color: #fff;
+}
+.slide h2 {
+    color: #fff;
 }
 
 /* Schedule Service Button */
 .schedule-btn-window {
-    background: orange;
+    background: #ff8f11;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -97,7 +121,7 @@ body {
 }
 
 .services-text .learn-more-btn {
-    background: orange;
+    background: #ff8f11;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -109,7 +133,7 @@ body {
 }
 
 .services-text .learn-more-btn:hover {
-    background: #e69500; /* Darker orange on hover */
+    background: #ff8f11; /* Darker orange on hover */
 }
 
 /* Icons Section */
@@ -179,7 +203,7 @@ body {
 }
 
 .after-hour-service button {
-    background-color: orange;
+    background-color: #ff8f11;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -190,7 +214,7 @@ body {
 }
 
 .after-hour-service button:hover {
-    background-color: #ffb300; /* Slightly darker gold */
+    background-color: #ff8f11; /* Slightly darker gold */
 }
 
 
@@ -211,14 +235,14 @@ body {
 
 .about-us-image {
     flex: 1;
-    max-width: 400px;
+    /*max-width: 900px;*/
     text-align: center;
 }
 
 .about-us-image img {
     /*max-width: 140%;*/
     margin-top: 60px;
-    width: 70%;
+    width: 120%;
     /*height: auto;*/
     border-radius: 20px; /* Rounded corners for the image */
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Optional: Shadow for the image *!*/
@@ -246,7 +270,7 @@ body {
 }
 
 .see-service-area-btn {
-    background: orange;
+    background: #ff8f11;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -258,7 +282,7 @@ body {
 }
 
 .see-service-area-btn:hover {
-    background: #e69500; /* Darker orange on hover */
+    background: #ff8f11; /* Darker orange on hover */
 }
 
 /* Testimonial Section */
@@ -381,6 +405,7 @@ body {
     .slide {
         height: 250px; /* Match carousel height */
         padding: 20px; /* Reduce padding */
+        background-position: center -120px; /* Moves the image 200px up */
     }
 
     .slide h2 {
@@ -431,6 +456,10 @@ body {
         max-width: 100%; /* Full width */
     }
 
+    .about-us-image img {
+        width: 90%;
+    }
+
     .about-us-content {
         max-width: 100%; /* Full width for text */
     }
@@ -460,6 +489,7 @@ body {
     .slide {
         height: 200px;
         padding: 15px;
+        background-position: center -270px; /* Moves the image 200px up */
     }
 
     .slide h2 {
@@ -478,6 +508,10 @@ body {
     .services-icons {
         grid-template-columns: 1fr; /* Single column for icons */
         gap: 10px; /* Reduce gap */
+    }
+
+    .about-us-image img {
+        width: 90%;
     }
 
     .testimonial-quote {

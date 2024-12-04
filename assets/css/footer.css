@@ -11,7 +11,7 @@ html, body {
 /* General Footer Styling */
 footer {
     background-color: #f4f4f4; /* Light gray background */
-    padding: 20px 0; /* Add padding for spacing */
+    padding: 0; /* Adjust padding based on viewport width */
     color: #333; /* Dark text for readability */
     width: 100%; /* Full width */
     box-sizing: border-box; /* Include padding in width */
@@ -22,52 +22,54 @@ footer {
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between; /* Space between left and right sections */
     align-items: flex-start; /* Align items at the top */
-    max-width: 1200px; /* Limit footer width for readability */
+    max-width: 90%; /* Limit footer width for readability */
     margin: 0 auto; /* Center the footer */
-    padding: 20px; /* Add padding inside */
+    padding: 2vw; /* Adjust padding inside */
+    gap: 2vw; /* Add spacing between sections */
 }
 
 /* Adjusted Logo Section */
 .footer-logo {
     display: flex; /* Make logo and text sit next to each other */
     align-items: center; /* Align items vertically in the center */
-    gap: 15px; /* Space between logo and text */
-    max-width: 50%; /* Limit width to half the footer */
+    gap: 3vw; /* Space between logo and text */
+    flex: 1 1 50%; /* Allow the section to shrink or grow within 50% width */
 }
 
 .footer-logo img {
-    width: 80px; /* Adjust logo size */
+    width: 5vw; /* Responsive logo size */
     height: auto;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column; /* Stack company name and details */
-    gap: 5px; /* Reduce space between lines */
+    gap: 1vw; /* Add space between lines */
 }
 
 .logo-text span {
-    font-size: 1.2rem; /* Slightly larger for the company name */
+    font-size: 1.25vw; /* Adjust font size for responsiveness */
     font-weight: bold; /* Make it stand out */
 }
 
 .logo-text p {
     margin: 0; /* Remove extra spacing around text */
-    font-size: 0.9rem; /* Adjust text size */
+    font-size: .75vw; /* Adjust text size */
 }
 
 /* Quick Links Section */
 .footer-links {
     display: flex;
     flex-direction: column; /* Stack links vertically */
-    gap: 10px; /* Add spacing between links */
+    gap: 1vw; /* Add spacing between links */
     text-align: right; /* Align links to the right */
-    max-width: 40%; /* Limit width to 40% */
+    flex: 1 1 40%; /* Allow the section to shrink or grow within 40% width */
 }
 
 .footer-links a {
     text-decoration: none; /* Remove underline */
     color: #14356b; /* Blue links */
+    font-size: 1vw; /* Responsive font size */
     font-weight: 500;
 }
 
@@ -77,10 +79,10 @@ footer {
 
 /* Footer Bottom Section */
 .footer-bottom {
-    font-size: 0.8em; /* Smaller text for bottom details */
+    font-size: 0.9vw; /* Smaller text for bottom details */
     color: #555; /* Gray text */
     text-align: center;
-    margin-top: 20px; /* Add space above bottom section */
+    margin-top: 2vw; /* Add space above bottom section */
 }
 
 .footer-bottom a {
@@ -93,64 +95,85 @@ footer {
 }
 
 .footer-note {
-    font-size: 0.8em; /* Smaller text for note */
+    font-size: 0.8vw; /* Smaller text for note */
     color: #555; /* Gray text */
     text-align: center;
-    margin-top: 10px; /* Add space above note */
+    margin-top: 1vw; /* Add space above note */
 }
 
 /* Media Queries for Responsiveness */
 
-/* Tablet Screens (768px and smaller) */
-@media screen and (max-width: 768px) {
+/* Tablet View */
+@media (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center-align content */
-        padding: 5px; /* Adjust padding for spacing */
-        text-align: center; /* Center text for better alignment */
+        flex-direction: row; /* Keep sections side-by-side */
+        justify-content: space-between; /* Space between sections */
+        text-align: left; /* Align text to the left */
+        gap: 3vw; /* Maintain gap between sections */
+        padding: 1vw; /* Adjust padding for smaller screens */
     }
+
     .footer-logo {
-        flex-direction: column; /* Stack logo and text vertically */
-        align-items: center;
+        flex: 1; /* Ensure it takes equal space */
+        text-align: left; /* Align logo and text to the left */
     }
-    .footer-logo img {
-        width: 70px; /* Adjust logo size */
-    }
-    .footer-logo span {
-        font-size: 1.2em; /* Slightly larger text for readability */
-    }
+
     .footer-links {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
-        gap: 10px; /* Maintain spacing between links */
-        text-align: center;
-        margin-top: 10px; /* Add space above links */
+        flex: 1; /* Ensure it takes equal space */
+        text-align: right; /* Keep links aligned to the right */
+        gap: 1vw; /* Add some spacing between links */
+        font-size: 1.5vw; /* Adjust font size for readability */
+    }
+
+    .footer-bottom, .footer-note {
+        font-size: 1.1vw; /* Adjust font size for bottom text */
+        margin-top: 0.5vw; /* Add some spacing above */
     }
 }
 
-/* Mobile Screens (480px and smaller) */
-@media screen and (max-width: 480px) {
+
+/* Mobile View */
+@media (max-width: 480px) {
     .footer-content {
-        padding: 10px; /* Smaller padding for compact design */
+        gap: 4vw; /* Add more spacing between sections */
+        padding: 5vw 3vw; /* Increase padding for mobile */
     }
+
     .footer-logo img {
-        width: 60px; /* Further reduce logo size */
+        width: 15vw; /* Adjust logo size for smaller screens */
     }
-    .footer-logo span {
-        font-size: 1em; /* Adjust text size for smaller screens */
+
+    .logo-text span {
+        font-size: 4vw; /* Larger font size for company name */
     }
-    .footer-logo p {
-        font-size: 0.8em; /* Reduce font size of address and phone number */
-        margin: 5px 0; /* Reduce spacing between text elements */
+
+    .logo-text p {
+        font-size: 3vw; /* Adjust details font size */
     }
+
     .footer-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 8px; /* Reduce gap between links */
+        display: flex; /* Enable flexbox layout */
+        flex-wrap: wrap; /* Allow wrapping if links are too wide */
+        justify-content: center; /* Center align the links */
+        gap: 2vw; /* Add spacing between links */
+        margin-top: 2vw; /* Add spacing from the content above */
+        flex-direction: row;
+
     }
+
+    .footer-links a {
+        font-size: 3vw; /* Adjust font size for links */
+        text-decoration: none; /* Ensure links look clean */
+    }
+
+    .footer-note {
+        font-size: 3vw; /* Adjust font size */
+        text-align: center; /* Center align the text */
+        margin-top: 2vw; /* Add spacing from the content above */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
     .footer-bottom {
-        font-size: 0.7em; /* Adjust font size for small screens */
-        /*padding-top: 4px; !* Add spacing above the footer bottom *!*/
-        margin-top: 10px; /* Adjust margin for better spacing */
+        font-size: 2.5vw; /* Adjust font size for footer bottom text */
     }
 }
-

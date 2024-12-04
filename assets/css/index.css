@@ -1,5 +1,8 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    box-sizing: border-box;
 }
 
 body {
@@ -9,13 +12,12 @@ body {
 .carousel {
     position: relative;
     overflow: hidden;
-    height: 350px;
-    width: 60%;
-    margin: 0 auto; /* Center the carousel horizontally */
+    height: 40vh; /* Use viewport height */
+    width: 60%; /* Full-width */
+    margin: 3vw auto;
     border-radius: 8px;
     align-items: center;
     display: flex;
-
 }
 
 .slides {
@@ -25,22 +27,19 @@ body {
 }
 
 .slide {
-    position: relative; /* To allow positioning of the pseudo-element */
+    position: relative;
     min-width: 100%;
-    height: 350px;
+    height: 100%;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     background-image: url('../images/light-pendulum.jpg');
     background-size: cover;
-    background-position: center -250px; /* Moves the image 200px up */
-    padding: 40px; /* Add space inside the slide */
-    box-sizing: border-box; /* Include padding in width/height */
+    background-position: center -12vw;
+    padding: 5vw; /* Adjust padding based on viewport width */
     text-align: center;
-    flex: 0 0 100%; /* Prevent shrinking or overflowing */
-    width: 100%;
-    overflow: hidden; /* Ensure no overflow from pseudo-element */
+    flex: 0 0 100%;
 }
 
 .slide::before {
@@ -50,263 +49,189 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Black with 50% transparency */
-    z-index: 1; /* Position the overlay behind the text */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .slide > * {
     position: relative;
-    z-index: 2; /* Position content above the overlay */
+    z-index: 2;
 }
 
 .slide p {
-    font-size: 18px;
+    font-size: 1vw;
     color: #fff;
-}
-.slide h2 {
-    color: #fff;
+    margin-bottom: 1.25vw;
 }
 
-/* Schedule Service Button */
+.slide h2 {
+    color: #fff;
+    font-size: 1.25vw;
+    margin-bottom: 1vw;
+}
+
 .schedule-btn-window {
     background: #ff8f11;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75vw 0.75vw; /* Use viewport width for padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
+    margin-top: 1vw;
 }
 
-/* Button Icon Styling */
-.button-icon-window {
-    width: 20px; /* Adjust the icon size */
-    height: 20px;
-}
-
-/* Full-width Services Section */
 .services-full-width {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Align content to the top */
-    width: 100%; /* Full width */
-    /*padding: 40px 5%; !* Add padding on the sides *!*/
-    padding: 40px 350px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1vw 10vw;
     box-sizing: border-box;
-    background-color: #ffffff; /* Optional: Background color */
-    gap: 20px; /* Space between sections */
+    background-color: #ffffff;
+    gap: 1vw;
+    flex-wrap: wrap;
 }
 
-/* Text Section */
 .services-text {
-    flex: 2; /* Allocate slightly more space for text */
+    flex: 2;
     text-align: center;
-    max-width: 50%; /* Limit text width */
+    max-width: 50%;
 }
 
 .services-text h2 {
-    color: #14356b; /* Red heading color */
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #14356b;
+    font-size: 1.25vw;
+    margin-bottom: 1vw;
     text-transform: uppercase;
 }
 
 .services-text p {
-    color: #555; /* Dark gray for readability */
-    font-size: 16px;
+    color: #555;
+    font-size: 1vw;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
 }
 
 .services-text .learn-more-btn {
     background: #ff8f11;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75vw 0.75vw;
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1vw;
     text-transform: uppercase;
 }
 
 .services-text .learn-more-btn:hover {
-    background: #ff8f11; /* Darker orange on hover */
+    background: #ff8f11;
 }
 
-/* Icons Section */
 .services-icons {
-    flex: 1; /* Allocate less space for icons */
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for icons */
-    gap: 20px; /* Space between items */
-    align-items: center; /* Align items to the top */
-    justify-items: center; /* Center icons in their section */
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5vw;
+    align-items: center;
+    justify-items: center;
     text-align: center;
     width: 100%;
-    padding: 20px;
+    padding: 5vw;
 }
 
 .service-item {
-    background-color: #f9f9f9; /* Light background for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1vw 2.5vw;
     width: 100%;
-    max-width: 200px; /* Limit card width */
+    max-width: 200px;
+    display: flex; /* Enable flexbox to center content */
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item img {
-    width: 80px; /* Adjust icon size */
-    margin-bottom: 10px; /* Space between icon and text */
+    width: 4vw;
+    margin-bottom: 1vw; /* Space between image and text */
 }
 
 .service-item h3 {
-    font-size: 18px;
-    margin: 10px 0 0;
-    color: #14356b; /* Text color */
+    font-size: 1vw; /* Adjust font size for better readability */
+    margin: 0; /* Remove any margin to keep content tight */
+    color: #14356b;
 }
 
 .service-item:hover {
-    transform: scale(1.05); /* Slight scale on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-/* Promo Section */
-.promo-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*padding: 40px 5%;*/
-    padding-left: 400px;
-    padding-right: 400px;
-    background-color: #ffffff; /* Background color */
-    gap: 20px; /* Space between promo card and service info */
-    box-sizing: border-box;
-}
-
-
-/* After-Hour Service */
-.after-hour-service {
-    background-color: #c9daf8; /* Red background */
-    color: black;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 2; /* Larger width compared to promo card */
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-}
-
-.after-hour-service h3 {
-    margin-top: 0;
-    font-size: 24px;
-    color: black; /* Gold text color */
-    text-transform: uppercase;
-}
-
-.after-hour-service p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.after-hour-service button {
-    background-color: #ff8f11;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.after-hour-service button:hover {
-    background-color: #ff8f11; /* Slightly darker gold */
-}
-
 
 .about-us-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*padding: 40px 4%;*/
-    padding-left: 300px;
-    padding-right: 300px;
-    gap: 20px;
-    background-color: #ffffff; /* White background */
+    padding: 1vw 10vw;
+    gap: 5vw;
+    background-color: #ffffff;
     border-radius: 8px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Subtle shadow *!*/
-    margin-top: 20px;
-    flex-wrap: wrap; /* Makes it mobile-friendly */
+    flex-wrap: wrap;
 }
 
 .about-us-image {
     flex: 1;
-    /*max-width: 900px;*/
     text-align: center;
 }
 
 .about-us-image img {
-    /*max-width: 140%;*/
-    margin-top: 60px;
-    width: 120%;
-    /*height: auto;*/
-    border-radius: 20px; /* Rounded corners for the image */
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); !* Optional: Shadow for the image *!*/
+    width: 90%;
+    margin-top: 5vw;
+    border-radius: 20px;
 }
 
 .about-us-content {
     flex: 2;
-    padding: 20px;
+    padding: 2vw;
     text-align: left;
     max-width: 80%;
 }
 
 .about-us-content h3 {
-    font-size: 28px;
-    color: #14356b; /* Blue color */
-    margin-bottom: 10px;
+    font-size: 1.25vw;
+    color: #14356b;
+    margin-bottom: 2vw;
     text-transform: uppercase;
+}
+
+.about-us-content h4 {
+    font-size: 1.1vw;
+    color: black;
+    margin-bottom: 1vw;
 }
 
 .about-us-content p {
-    font-size: 16px;
-    color: #555; /* Gray color */
-    margin-bottom: 15px;
+    font-size: 1vw;
+    color: #555;
+    margin-bottom: 2vw;
     line-height: 1.6;
 }
 
-.see-service-area-btn {
-    background: #ff8f11;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.see-service-area-btn:hover {
-    background: #ff8f11; /* Darker orange on hover */
-}
-
-/* Testimonial Section */
 .testimonial-section {
     position: relative;
     width: 100%;
     overflow: hidden;
     color: #fff;
-    padding: 60px 5%;
+    padding: 1vw 10vw;
     box-sizing: border-box;
 }
 
-/* Background Image */
 .testimonial-background {
     position: absolute;
     top: 0;
@@ -320,48 +245,53 @@ body {
 .testimonial-background img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the section */
-    opacity: 0.85; /* Slightly dim the image for readability */
+    object-fit: cover;
+    opacity: 0.85;
 }
 
-/* Testimonial Content */
 .testimonial-content {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2; /* Ensure content is above the background */
-    flex-wrap: wrap; /* Make it responsive */
-    gap: 20px;
+    z-index: 2;
+    flex-wrap: wrap;
+    gap: 5vw;
 }
 
-/* Left Section */
 .testimonial-left {
     flex: 1;
     text-align: center;
     max-width: 40%;
-    gap: 20px;
+    gap: 5vw;
 }
 
 .testimonial-left h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 1.25vw;
+    margin-bottom: 2vw;
     color: #000000;
     text-transform: uppercase;
+}
+
+.testimonial-left p {
+    font-size: 1vw;
+    margin-bottom: 2vw;
+    color: #555;
+    line-height: 1.6;
 }
 
 .leave-review-btn {
     background-color: #c32d2d;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75vw 0.75vw;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1vw;
     transition: background-color 0.3s;
-    gap: 10px;
+    gap: 1vw;
     display: inline-flex;
     align-items: center;
 }
@@ -370,168 +300,282 @@ body {
     background-color: #a02424;
 }
 
-/* Right Section */
 .testimonial-right {
     flex: 2;
     background-color: #fff;
     color: #333;
     border-radius: 8px;
-    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 50%;
+    padding: 5vw;
+    text-align: center;
+    height: fit-content;
 }
 
-.testimonial-quote {
-    position: relative;
-    font-size: 16px;
-    line-height: 1.8;
+.testimonial-right h3 {
+    font-size: 1.25vw;
+    font-weight: bold;
+    margin: 2vw 0;
+    color: #14356b;
+}
+
+.testimonial-right p {
+    font-size: 1vw;
+    margin: 2vw 0;
     color: #555;
 }
 
-.quote-icon {
-    font-size: 50px;
+.testimonial-right span {
+    font-size: 2vw;
     color: #14356b;
-    position: absolute;
-    top: -10px;
-    left: 0;
+    font-weight: bold;
+    position: relative;
+    display: block;
 }
 
 .testimonial-author {
-    margin-top: 15px;
-    font-weight: bold;
+    font-size: 1vw;
     color: #14356b;
 }
 
-/* Adjustments for smaller screens (phones and tablets) */
-@media screen and (max-width: 768px) {
+/* Responsive Adjustments */
 
-    body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
+/* Tablets (max-width: 768px) */
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
     .carousel {
-        height: 250px; /* Reduce height */
-        width: 90%; /* Increase width on smaller screens */
+        width: 90%;
+        height: 50vh;
     }
 
     .slide {
-        height: 250px; /* Match carousel height */
-        padding: 20px; /* Reduce padding */
-        background-position: center -120px; /* Moves the image 200px up */
+        padding: 8vw;
+        background-position: center;
     }
 
     .slide h2 {
-        font-size: 18px; /* Reduce font size */
+        font-size: 3.5vw;
     }
 
     .slide p {
-        font-size: 14px; /* Reduce font size */
+        font-size: 3vw;
     }
 
     .schedule-btn-window {
-        padding: 8px 16px; /* Adjust padding */
-        font-size: 14px; /* Reduce font size */
+        font-size: 3vw;
+        padding: 2.5vw 3vw; /* Bigger button size */
     }
 
+    .services-text h2 {
+        font-size: 4vw;
+    }
+
+    .services-text p {
+        font-size: 3vw;
+    }
+
+    .service-item {
+        padding: 6vw 3.5vw; /* Balanced padding to prevent overflow */
+        width: auto; /* Allow width to adjust automatically */
+        max-width: 90%; /* Prevent the card from becoming too wide */
+        font-size: 3vw; /* Slightly reduce font size for better fit */
+        border-radius: 12px; /* Keep the rounded edges */
+        box-sizing: border-box; /* Ensure padding is considered in the width */
+        text-align: center; /* Center-align text inside */
+    }
+
+    .service-item h3 {
+        font-size: 3.5vw; /* Adjust heading size */
+        margin: 1vw 0; /* Add some margin around the heading */
+        line-height: 1.2; /* Reduce line-height for a tighter layout */
+    }
+
+    .service-item img {
+        width: 8vw; /* Resize image slightly */
+        max-width: 100%; /* Prevent image overflow */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 2vw; /* Add spacing below the image */
+    }
+
+    .service-item p {
+        font-size: 2.8vw; /* Reduce font size of text */
+        line-height: 1.4; /* Ensure enough spacing between lines */
+        margin: 0; /* Prevent additional margins */
+        word-wrap: break-word; /* Wrap long words to prevent overflow */
+    }
+
+
     .services-full-width {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center items */
-        padding: 20px 5%;
+        flex-direction: column; /* Stack content vertically */
+        padding: 5vw 2vw;
+        gap: 3vw; /* Increase space between stacked elements */
     }
 
     .services-text {
-        max-width: 100%; /* Full width for text */
-        margin-bottom: 20px; /* Add space between sections */
+        max-width: 100%; /* Allow the text to take the full width */
+        text-align: center; /* Center align the text */
     }
 
     .services-icons {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for icons */
+        grid-template-columns: 1fr; /* Make icons stack in one column */
+        padding: 5vw 2vw;
     }
 
-    .promo-section {
-        flex-direction: column; /* Stack promo card and after-hour service vertically */
-        align-items: center;
-        padding: 20px 5%;
+    .about-us-section,
+    .testimonial-content {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;
+        padding: 5vw 2vw;
     }
 
-    .after-hour-service {
-        width: 100%; /* Full width */
-    }
-
-    .about-us-section {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center;
-        padding: 20px;
-    }
-
-    .about-us-image {
-        max-width: 100%; /* Full width */
-    }
-
-    .about-us-image img {
-        width: 90%;
+    .about-us-image img,
+    .testimonial-right {
+        width: 100%;
     }
 
     .about-us-content {
-        max-width: 100%; /* Full width for text */
+        padding: 2vw;
     }
 
-    .testimonial-content {
-        flex-direction: column; /* Stack testimonial sections vertically */
-        align-items: center;
-        padding: 20px;
+    .about-us-content h3 {
+        font-size: 4vw;
     }
 
-    .testimonial-left,
-    .testimonial-right {
-        max-width: 100%; /* Full width */
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    .body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+    .about-us-content h4 {
+        font-size: 3.5vw;
     }
 
-    .carousel {
-        height: 200px; /* Further reduce height for phones */
+    .about-us-content p {
+        font-size: 3vw;
     }
 
-    .slide {
-        height: 200px;
-        padding: 15px;
-        background-position: center -270px; /* Moves the image 200px up */
+    .testimonial-left h2 {
+        font-size: 4vw;
     }
 
-    .slide h2 {
-        font-size: 16px; /* Reduce font size */
-    }
-
-    .slide p {
-        font-size: 10px; /* Reduce font size */
-    }
-
-    .schedule-btn-window {
-        padding: 8px 16px; /* Reduce padding */
-        font-size: 12px; /* Reduce font size */
-    }
-
-    .services-icons {
-        grid-template-columns: 1fr; /* Single column for icons */
-        gap: 10px; /* Reduce gap */
-    }
-
-    .about-us-image img {
-        width: 90%;
-    }
-
-    .testimonial-quote {
-        font-size: 14px; /* Reduce font size */
+    .testimonial-left p {
+        font-size: 3vw;
     }
 
     .leave-review-btn {
-        font-size: 14px; /* Adjust button text size */
-        padding: 8px 15px; /* Reduce padding */
+        font-size: 3vw; /* Bigger button size */
+        padding: 2vw 3vw;
     }
 
+    .testimonial-right h3 {
+        font-size: 4vw;
+    }
+
+    .testimonial-right p {
+        font-size: 3vw;
+    }
+
+    .testimonial-right span {
+        font-size: 4vw;
+    }
 }
+
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .carousel {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .slide {
+        padding: 10vw;
+        background-position: center;
+    }
+
+    .slide h2 {
+        font-size: 4vw;
+    }
+
+    .slide p {
+        font-size: 3.5vw;
+    }
+
+    .schedule-btn-window {
+        font-size: 4vw;
+        padding: 3vw 4vw; /* Bigger button size */
+    }
+
+    .services-full-width {
+        padding: 8vw 4vw;
+    }
+
+    .services-text h2 {
+        font-size: 5vw;
+    }
+
+    .services-text p {
+        font-size: 4vw;
+    }
+
+    .services-icons {
+        padding: 12vw 4vw;
+    }
+
+    .service-item {
+        padding: 6vw 4vw;
+        width: 100%;
+    }
+
+    .service-item img {
+        width: 12vw;
+    }
+
+    .about-us-section,
+    .testimonial-content {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;
+        padding: 8vw 4vw;
+    }
+
+    .about-us-image img,
+    .testimonial-right {
+        width: 100%;
+    }
+
+    .about-us-content {
+        padding: 2vw;
+    }
+
+    .about-us-content h3 {
+        font-size: 5vw;
+    }
+
+    .about-us-content h4 {
+        font-size: 4.5vw;
+    }
+
+    .about-us-content p {
+        font-size: 4vw;
+    }
+
+    .testimonial-left h2 {
+        font-size: 5vw;
+    }
+
+    .testimonial-left p {
+        font-size: 4vw;
+    }
+
+    .leave-review-btn {
+        font-size: 4vw; /* Bigger button size */
+        padding: 3vw 4vw;
+    }
+
+    .testimonial-right h3 {
+        font-size: 5vw;
+    }
+
+    .testimonial-right p {
+        font-size: 4vw;
+    }
+
+    .testimonial-right span {
+        font-size: 5vw;
+    }
+}
+

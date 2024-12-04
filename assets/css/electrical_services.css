@@ -1,20 +1,22 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 /* Banner Section */
 .services-banner {
     background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
-    background-size: 100%;
-    background-position: center -400px;
+    background-size: cover;
+    background-position: center -40vh;
     background-color: rgba(20, 53, 107, 0.6); /* Optional fallback color */
     background-blend-mode: overlay;
     color: #fff;
-    padding: 80px 0;
+    padding: 10vh 0;
+    margin-top: 3vw;
 }
 
 .services-banner h2 {
-    font-size: 36px;
+    font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
@@ -24,25 +26,24 @@
 /* Content Section */
 .services-content {
     background: #c9daf8;
-    border-radius: 10px;
-    padding: 20px 40px;
-    /*padding-left: 400px;*/
-    /*padding-right: 400px;*/
-    margin: 30px 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /*max-width: 70%;*/
+    border-radius: 0.5rem;
+    padding: 2rem 5%;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .services-content h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: black;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 .services-content p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: #555;
 }
@@ -59,14 +60,14 @@
 
 /* Schedule Service Button */
 .schedule-service-btn {
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 1rem;
+    margin-top: 1rem;
     transition: background-color 0.3s;
     background-color: orange;
     color: white;
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
@@ -77,15 +78,16 @@
 }
 
 .mid-info {
-    position: relative; /* Make the container a positioning context for ::before */
-    margin: 30px 400px;
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    /*background-color: #e8f3ff;*/
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .mid-info::before {
@@ -97,116 +99,84 @@
     bottom: 0;
     background-image: url('../images/ripped-wires.jpg');
     background-color: #e8f3ff;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1; /* Places the image behind the text */
-    border-radius: 10px; /* Matches the parent container */
-    opacity: 0.5; /* Adjust for desired transparency (0 = fully transparent, 1 = fully opaque) */
+    z-index: -1;
+    border-radius: 0.5rem;
+    opacity: 0.5;
 }
-
-
 
 .electric-content {
     color: #333;
 }
 
 .electric-content h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #14356b;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 .electric-content p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin-bottom: 1.5rem;
 }
-
-.electric-content h4 {
-    font-size: 20px;
-    color: #14356b;
-    margin-bottom: 10px;
-    margin-left: 40px;
-}
-
-.electric-content ul {
-    list-style-type: disc;
-    font-size: 16px;
-    color: #555;
-}
-
-.electric-content li {
-    margin-bottom: 10px;
-}
-
 
 #problems-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2rem;
     background-color: #c9daf8;
-    margin: 30px 400px;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 #problems-section .electric-content-problems {
     color: #333;
-    max-width: 100%;
-    text-align: left; /* Default left alignment for all content */
+    text-align: left;
 }
 
 #problems-section .electric-content-problems h3,
 #problems-section .electric-content-problems h4 {
-    text-align: center; /* Center align only h3 and h4 */
+    text-align: center;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 #problems-section .electric-content-problems h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: black;
 }
 
 #problems-section .electric-content-problems h4 {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black;
 }
 
-#problems-section .electric-content-problems p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-#problems-section .electric-content-problems ul {
-    list-style-type: disc;
-    font-size: 16px;
-    color: #555;
-    padding-left: 20px;
-}
-
+#problems-section .electric-content-problems p,
 #problems-section .electric-content-problems li {
-    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
 }
 
+/* Services Section */
 #services-section {
-    position: relative; /* Needed for pseudo-element positioning */
-    margin: 30px 400px;
-    padding: 20px;
-    background-color: #e8f3ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 1; /* Ensures the text stays above the background */
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
     color: black;
+    background-color: #e8f3ff;
 }
 
 #services-section::before {
@@ -217,135 +187,130 @@
     right: 0;
     bottom: 0;
     background-image: url('../images/ripped-wires.jpg');
-    background-size: 100%;
-    background-repeat: repeat-y;
-    background-position: center -150px;
-    transform: scaleX(-1); /* Mirrors the background image */
-    border-radius: 10px; /* Matches the parent section */
-    z-index: -1; /* Places the image behind the text */
-    opacity: 0.5; /* Adjust the opacity for better readability */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e8f3ff;
+    z-index: -1;
+    border-radius: 0.5rem;
+    opacity: 0.5;
 }
 
-
 #services-section h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #14356b;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 #services-section p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
     text-align: justify;
-    padding: 0 20px;
 }
 
 #services-list {
     list-style-type: disc;
-    /*margin: 20px auto;*/
-    padding-left: 20px;
+    padding-left: 1.5rem;
     color: #333;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #services-list li {
-    margin-bottom: 10px; /* Add space between each item */
+    margin-bottom: 0.75rem;
 }
 
 /* Media Queries for Tablets */
 @media (max-width: 768px) {
     .services-banner {
         background-position: center -100px;
+        padding: 8vh 0;
     }
 
     .services-banner h2 {
-        font-size: 24px;
+        font-size: 2rem; /* Adjust headline size */
     }
 
     .mid-info, .services-content, #problems-section, #services-section {
         flex-direction: column; /* Stack child elements vertically */
         margin: 20px auto; /* Reduce margins */
-        max-width: 90%; /* Allow more room for content */
+        max-width: 95%; /* Adjust max width for tablets */
         padding: 20px; /* Adjust padding */
     }
 
-    .electric-content {
-        text-align: center;
-        max-width: 95%;
-        padding: 15px;
+    .electric-content h3 {
+        font-size: 1.25rem; /* Slightly smaller heading */
+    }
+
+    .electric-content p {
+        font-size: 0.95rem; /* Adjust paragraph font size */
+    }
+
+    #services-section h2 {
+        font-size: 1.25rem; /* Smaller section heading */
+    }
+
+    #services-list {
+        font-size: 0.95rem; /* Adjust list font size */
+    }
+
+    .schedule-service-btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 0.6rem 1rem; /* Adjust padding */
     }
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 480px) {
     .services-banner {
-        padding: 40px 10px; /* Reduce padding */
+        padding: 6vh 5vw; /* Reduce padding */
+        background-position: center -80px;
     }
 
     .services-banner h2 {
-        font-size: 20px; /* Smaller headline */
+        font-size: 1.5rem; /* Smaller headline */
     }
 
     .schedule-service-btn {
-        font-size: 12px; /* Adjust font for buttons */
-        padding: 8px 10px;
+        font-size: 0.8rem; /* Adjust font for buttons */
+        padding: 0.5rem 0.75rem;
     }
 
     .mid-info, .services-content, #problems-section, #services-section {
         flex-direction: column; /* Stack sections vertically */
-        padding: 10px; /* Add padding for spacing */
+        padding: 10px; /* Adjust padding for spacing */
         margin: 10px auto; /* Center with smaller margins */
-        width: 90%; /* Ensure a consistent width */
+        width: 90%; /* Ensure consistent width */
     }
 
     .electric-content {
         text-align: center; /* Center-align the text */
-        padding: 10px; /* Add padding for spacing */
+        padding: 10px; /* Adjust padding for spacing */
+    }
+
+    .services-content h3,
+    #problems-section .electric-content-problems h3 {
+        font-size: 1.25rem; /* Adjust headline font size */
     }
 
     .services-content p,
-    #services-section p {
-        font-size: 12px;
+    #problems-section .electric-content-problems p {
+        font-size: 0.9rem; /* Adjust font size for content */
     }
 
-    #problems-section .electric-content-problems h3,
-    #problems-section .electric-content-problems h4 {
-        font-size: 16px;
-    }
-
-    /* Align lists to the left on mobile */
-    ul {
-        text-align: left;
-        padding-left: 20px; /* Optional: Add consistent padding for better alignment */
-    }
-
-    li {
-        font-size: 12px; /* Adjust font size */
-        text-align: left; /* Ensure list items are aligned */
-    }
-
-    #services-section {
-        background-color: #e8f3ff;
+    #services-list {
+        font-size: 0.9rem; /* Smaller list font size */
     }
 
     #services-section::before {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../images/ripped-wires.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scaleX(-1); /* Mirrors the background image */
-    border-radius: 10px; /* Matches the parent section */
-    z-index: -1; /* Places the image behind the text */
-    opacity: 0.5; /* Adjust the opacity for better readability */
-}
+        top: 100px;
+        background-size: 100%;
+        background-position: center;
+        transform: scaleX(-1); /* Mirrors the background image */
+        border-radius: 10px; /* Matches the parent section */
+        opacity: 0.5; /* Maintain readability */
+    }
 }

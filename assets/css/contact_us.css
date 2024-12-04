@@ -1,20 +1,22 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 /* Banner Section */
 .contact-banner {
     background-image: url('../images/wiring.jpg'); /* Replace with your image path */
-    background-size: 100%; /* Match background size with other pages */
-    background-position: center -460px; /* Match position with other banners */
+    background-size: cover; /* Make it cover the container */
+    background-position: center -40vh; /* Adjust position responsively */
     background-color: rgba(20, 53, 107, 0.6); /* Optional fallback color */
     background-blend-mode: overlay;
     color: #fff;
-    padding: 80px 0; /* Standardized padding to reduce height */
+    padding: 10vh 0; /* Use viewport height for consistent banner size */
+    margin-top: 3vw; /* Adjust margin using viewport width */
 }
 
 .contact-banner h2 {
-    font-size: 36px;
+    font-size: 2.5rem; /* Use relative font size */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
@@ -23,124 +25,113 @@
 
 /* Contact Section Layout */
 .contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw; /* Use viewport width for consistent spacing */
+    padding: 5vw; /* Adjust padding for responsiveness */
+    background-color: #f9f9f9;
 }
 
-.contact-info {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-details-box {
-    flex: 1;
-    padding: 20px;
-    background-color: #c9daf8;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 10%;
-}
-
+.contact-info,
+.contact-details-box,
 .schedule-form {
     flex: 1;
-    padding-left: 140px;
-    padding-right: 140px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info {
-    flex: 1;
-    /*padding: 20px;*/
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-left: 140px;
-    padding-right: 140px;
+    padding: 5vw; /* Adjust padding for responsiveness */
+    border-radius: 0.5rem; /* Consistent border radius */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-color: #ffffff; /* Default background */
 }
 
+/* Contact Details Box */
+.contact-details-box {
+    background-color: #c9daf8;
+    margin-top: 5vh; /* Adjust margin using viewport height */
+}
+
+/* Schedule Form */
 .schedule-form h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    font-size: 1.5rem; /* Relative font size */
+    font-weight: bold;
+    margin-bottom: 2vh; /* Use viewport height for spacing */
     text-align: center;
 }
 
-.schedule-form input, .schedule-form select {
-  width: 80%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: left;
-  font-size: 16px; /* Match font size */
-  height: 40px; /* Match height for consistency */
+.schedule-form input,
+.schedule-form select {
+    width: 80%; /* Use percentage for width */
+    padding: 1em; /* Use em for consistent spacing */
+    border: 0.1rem solid #ccc; /* Adjust border size */
+    border-radius: 0.25rem;
+    font-size: 1rem; /* Relative font size */
+    height: auto; /* Remove fixed height */
 }
 
-/* Responsive Adjustments for Tablets */
+/* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
     .contact-banner {
-        background-position: center -120px;
-        padding: 78px 10px;
+        padding: 8vh 0; /* Reduce padding for smaller screens */
+        background-position: center -15vh; /* Adjust background positioning */
+    }
+
+    .contact-banner h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
     }
 
     .contact-section {
-        flex-direction: column; /* Stack items vertically */
-        gap: 15px; /* Reduce gap */
+        padding: 4vw; /* Reduce padding */
+        gap: 3vw; /* Adjust spacing between sections */
     }
 
     .contact-info,
     .contact-details-box,
     .schedule-form {
-        flex: 1 1 auto; /* Allow sections to take full width */
-        margin-top: 0; /* Remove additional margin */
-    }
-
-    .schedule-form input,
-    .schedule-form select {
-        width: 90%; /* Increase width for better usability */
-    }
-
-    .contact-banner h2 {
-        font-size: 28px; /* Adjust font size for smaller screens */
-    }
-}
-
-/* Responsive Adjustments for Mobile */
-@media (max-width: 480px) {
-    .contact-banner {
-        background-position: center -100px;
-        background-size: 100%; /* Consistent with tablet and desktop */
-        padding: 38px 10px;
-    }
-
-    .contact-section {
-        padding: 10px; /* Compact padding */
-    }
-
-    .contact-info,
-    .contact-details-box,
-    .schedule-form {
-        padding: 15px; /* Compact padding for content boxes */
-    }
-
-    .contact-banner h2 {
-        font-size: 24px; /* Smaller font for headlines */
-    }
-
-    .schedule-form input,
-    .schedule-form select {
-        width: 100%; /* Full width for mobile */
-        font-size: 14px; /* Slightly smaller text */
+        padding: 4vw; /* Reduce padding */
+        flex: 1 1 100%; /* Stack elements vertically */
     }
 
     .schedule-form h2 {
-        font-size: 20px; /* Adjust form title size */
+        font-size: 1.25rem; /* Reduce font size */
+    }
+
+    .schedule-form input,
+    .schedule-form select {
+        width: 100%; /* Full width on tablets */
+        padding: 0.75em; /* Adjust padding */
+    }
+}
+
+/* Media Query for Phones (480px and below) */
+@media (max-width: 480px) {
+    .contact-banner {
+        padding: 6vh 0; /* Further reduce padding */
+        background-position: center -10vh; /* Adjust background positioning */
+    }
+
+    .contact-banner h2 {
+        font-size: 1.75rem; /* Further reduce font size */
+    }
+
+    .contact-section {
+        padding: 3vw; /* Reduce padding */
+        gap: 2vw; /* Narrow the gap */
+    }
+
+    .contact-info,
+    .contact-details-box,
+    .schedule-form {
+        padding: 3vw; /* Reduce padding further */
+        flex: 1 1 100%; /* Ensure elements stack vertically */
+    }
+
+    .schedule-form h2 {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .schedule-form input,
+    .schedule-form select {
+        width: 100%; /* Full width on smaller devices */
+        padding: 0.5em; /* Reduce padding */
+        font-size: 0.875rem; /* Reduce font size */
     }
 }

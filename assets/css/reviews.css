@@ -1,62 +1,65 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 /* Banner Section */
 .services-banner {
     background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
-    background-size: 100%;
-    background-position: center -400px;
+    background-size: cover; /* Ensure the background covers the container */
+    background-position: center -40vh; /* Adjust position responsively */
     background-color: rgba(20, 53, 107, 0.6); /* Optional fallback color */
     background-blend-mode: overlay;
     color: #fff;
-    padding: 80px 0;
+    padding: 10vh 0; /* Use viewport height for consistent banner size */
+    margin-top: 3vw; /* Adjust margin using viewport width */
 }
 
 .services-banner h2 {
-    font-size: 36px;
+    font-size: 2.5rem; /* Use rem for font size */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     text-align: center;
 }
 
+/* Reviews Container */
 .reviews-container {
-    padding: 20px;
-    max-width: 800px;
+    padding: 1vw;
+    max-width: 80%; /* Set max width relative to parent container */
     margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
 }
 
+/* Review Card */
 .review-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    padding: 2vw; /* Use viewport width for padding */
+    margin: 2vw 0;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
 }
 
 .review-card h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem; /* Use rem for relative font size */
     color: #333;
 }
 
 .review-location {
-    font-size: 14px;
+    font-size: 0.875rem; /* Use rem for relative font size */
     color: #666;
 }
 
 .review-service {
-    font-size: 16px;
+    font-size: 1rem; /* Use rem for relative font size */
     color: #555;
-    margin: 8px 0;
+    margin: 0.5vw 0;
 }
 
 .review-text {
     font-style: italic;
-    margin: 10px 0;
+    margin: 1vw 0;
 }
 
 .review-rating {
@@ -65,131 +68,84 @@
 }
 
 .review-date {
-    font-size: 12px;
+    font-size: 0.75rem; /* Use rem for relative font size */
     color: #666;
 }
 
-/* Responsive Adjustments for Tablets */
+/* Media Queries for Tablet (768px and below) */
 @media (max-width: 768px) {
     .services-banner {
-        background-position: center -100px;
+        padding: 8vh 0; /* Reduce padding for tablet screens */
+        background-position: center -30vh;
     }
 
     .services-banner h2 {
-        font-size: 24px;
+        font-size: 2rem; /* Adjust font size for tablet screens */
     }
+
     .reviews-container {
-        padding: 15px; /* Reduce padding for smaller screens */
-        max-width: 90%; /* Flexible width */
+        padding: 4vw;
     }
 
     .review-card {
-        padding: 12px; /* Adjust padding */
-        margin: 10px 0; /* Reduce margin */
+        padding: 4vw; /* Adjust padding for tablets */
+        margin: 3vw 0;
     }
 
     .review-card h3 {
-        font-size: 16px; /* Adjust headline size */
+        font-size: 1rem;
     }
 
     .review-location,
-    .review-service {
-        font-size: 14px; /* Smaller text */
-    }
-
-    .review-text {
-        font-size: 14px;
-    }
-
+    .review-service,
+    .review-text,
+    .review-rating,
     .review-date {
-        font-size: 11px; /* Reduce size for dates */
+        font-size: 0.875rem; /* Adjust font sizes for readability on smaller screens */
     }
 }
 
-/* Responsive Adjustments for Mobile */
+/* Media Queries for Phones (480px and below) */
 @media (max-width: 480px) {
     .services-banner {
-        padding: 40px 10px; /* Reduce padding */
+        padding: 6vh 0; /* Further reduce padding for mobile */
+        background-position: center -20vh;
     }
 
     .services-banner h2 {
-        font-size: 20px; /* Smaller headline */
+        font-size: 1.75rem; /* Further reduce font size for mobile */
     }
 
     .reviews-container {
-        padding: 10px; /* Minimal padding for mobile */
-        max-width: 100%;
+        padding: 3vw; /* Adjust padding for mobile screens */
     }
 
     .review-card {
-        padding: 10px; /* Compact padding */
-        margin: 8px 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 5vw; /* Increase padding for better spacing */
+        margin: 4vw 0;
     }
 
     .review-card h3 {
-        font-size: 14px; /* Smaller headline */
+        font-size: 1rem;
     }
 
-    .review-location,
+    .review-location {
+        font-size: 0.75rem;
+    }
+
     .review-service {
-        font-size: 12px; /* Compact text */
+        font-size: 0.875rem;
     }
 
     .review-text {
-        font-size: 12px;
+        font-size: 0.875rem;
     }
 
     .review-rating {
-        font-size: 14px; /* Keep ratings prominent */
+        font-size: 1rem;
     }
 
     .review-date {
-        font-size: 10px; /* Smallest size for dates */
+        font-size: 0.625rem; /* Further reduce font size */
     }
 }
-
-
-/* Media Queries for Mobile */
-@media (max-width: 480px) {
-
-
-    .schedule-service-btn {
-        font-size: 12px; /* Adjust font for buttons */
-        padding: 8px 10px;
-    }
-
-    .mid-info, .services-content, #problems-section, #services-section {
-        flex-direction: column; /* Stack sections vertically */
-        padding: 10px; /* Add padding for spacing */
-        margin: 10px auto; /* Center with smaller margins */
-        width: 90%; /* Ensure a consistent width */
-    }
-
-    .electric-content {
-        text-align: center; /* Center-align the text */
-        padding: 10px; /* Add padding for spacing */
-    }
-
-    .services-content p,
-    #services-section p {
-        font-size: 12px;
-    }
-
-    #problems-section .electric-content-problems h3,
-    #problems-section .electric-content-problems h4 {
-        font-size: 16px;
-    }
-
-    /* Align lists to the left on mobile */
-    ul {
-        text-align: left;
-        padding-left: 20px; /* Optional: Add consistent padding for better alignment */
-    }
-
-    li {
-        font-size: 12px; /* Adjust font size */
-        text-align: left; /* Ensure list items are aligned */
-    }
-}
-

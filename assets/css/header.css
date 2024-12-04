@@ -9,60 +9,58 @@ html, body {
 header {
     background: rgb(255, 255, 255);
     position: relative;
-    height: 130px; /* Adjust as needed */
-    padding: 20px;
+    height: 15vh; /* Use percentage of viewport height */
+    padding: 2vw; /* Adjust padding relative to the screen size */
     display: flex;
-    align-items: flex-start;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items at the top */
 }
 
 /* Logo and Company Name */
 .logo-container {
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Center logo and text together */
-    gap: 10px;
+    align-items: center; /* Center logo and text vertically */
+    gap: 1vw; /* Space between logo and name */
 }
 
 .logo {
-    width: 100px; /* Adjust size as needed */
+    width: 5vw; /* Slightly smaller logo */
     height: auto;
 }
 
 .company-name {
-    font-size: 32px; /* Big text for company name */
+    font-size: 2vw; /* Make the company name slightly smaller */
     font-weight: bold;
     color: #14356b; /* Use the primary blue color */
 }
 
-/* Navigation Links */
+/* Navigation Links - Positioned in a row */
 .nav {
-    position: absolute;
-    bottom: 0; /* Position at the bottom of the header */
-    left: 5%; /* Align to the left */
-    /*align-items: center;*/
+    display: flex;
+    flex-direction: row; /* Arrange links in a row */
+    align-items: center; /* Center the links vertically */
+    justify-content: flex-start; /* Align links to the left */
+    gap: 2vw; /* Space between links */
+    padding-top: 1vw; /* Space between logo and links */
 }
 
-/* Navigation Links */
 .nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 10px;
-    gap: 20px; /* Add spacing between items */
+    flex-direction: row; /* Links arranged in a row */
+    gap: 2vw; /* Space between items */
 }
 
 .nav ul li {
-    margin-right: 80px; /* Add spacing between links */
     position: relative;
 }
 
 .nav ul li a {
     color: #14356b;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25vw; /* Smaller font size for navigation links */
     white-space: nowrap;
 }
 
@@ -74,9 +72,9 @@ header {
     color: #14356b;
     top: 100%; /* Position dropdown below parent */
     left: 0;
-    min-width: 200px;
+    min-width: 15vw; /* Set dropdown width relative to viewport */
     list-style: none;
-    padding: 10px;
+    padding: 2vw;
     border: 1px solid #ccc;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -86,7 +84,7 @@ header {
 }
 
 .dropdown-menu li {
-    padding: 5px 10px;
+    padding: 1vw 2vw;
     cursor: pointer;
     border-radius: 4px;
     background: #fff;
@@ -107,28 +105,28 @@ header {
 
 /* Buttons Container */
 .header-buttons {
-  position: absolute;
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
-  gap: 10px; /* Add spacing between buttons */
-  top: 40px; /* Align to the top */
-  right: 100px; /* Align to the right */
+  gap: 1.5vw; /* Add spacing between buttons */
+  top: 2vw; /* Align to the top relative to the header */
+  right: 2vw; /* Align to the right with 5% margin */
+  position: absolute;
 }
 
 /* Styling for Call Now Link */
 .call-now-btn {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.8vw; /* Space between icon and text */
     text-decoration: none;
     background: #ff8f11;
     color: #ffffff;
     border: none;
-    padding: 8px 16px;
+    padding: 0.75vw 0.75vw; /* Smaller padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 1vw; /* Adjust font size relative to screen size */
     text-align: center;
 }
 
@@ -137,27 +135,26 @@ header {
     background: #ff8f11;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75vw 0.75vw; /* Smaller padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw; /* Adjust font size relative to screen size */
 }
 
 /* Common button styles */
 .schedule-btn, .call-now-btn {
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between icon and text */
+    gap: 1vw; /* Space between icon and text */
 }
 
 /* Button Icon Styling */
 .button-icon {
-    width: 20px; /* Adjust the icon size */
-    height: 20px;
+    width: 1.5vw; /* Adjust icon size relative to viewport */
+    height: 1.5vw;
 }
-
 
 
 /* Responsive Adjustments */
@@ -166,77 +163,74 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: row;
-        height: 130px;
-        padding: 10px;
+        height: 15vh; /* Adjust header height */
+        padding: 4vw; /* Use percentage to adjust padding */
         position: relative;
     }
 
-
     .logo {
-        width: 80px; /* Smaller logo for mobile */
+        width: 10vw; /* Adjust logo size relative to the screen */
     }
 
     .company-name {
-        font-size: 24px;
+        font-size: 4vw; /* Adjust font size relative to screen width */
         text-align: center;
     }
 
     /* Navigation Links */
     .nav {
         position: absolute;
-        bottom: 10%; /* Position at the bottom of the header */
-        left: 10%; /* Align to the left */
+        bottom: 2vw; /* Position at the bottom with padding relative to screen */
+        left: 5%; /* Align to the left */
+        gap: 5vw; /* Increase spacing between items */
     }
 
-    /* Navigation Links */
     .nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         position: absolute;
-        bottom: 10px;
-        gap: 20px; /* Add spacing between items */
+        bottom: 0;
+        gap: 4vw; /* Adjust gap for better spacing */
     }
 
     .nav ul li {
-        margin-right: 0; /* Add spacing between links */
+        margin-right: 0;
     }
 
     .nav ul li a {
         color: #14356b;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 2.5vw; /* Scale font size based on screen width */
         white-space: nowrap;
     }
 
     .dropdown-menu li {
-        font-size: 10px;
+        font-size: 1.5vw; /* Adjust dropdown item size */
     }
 
     /* Buttons Container */
     .header-buttons {
       position: absolute;
       display: flex;
-      flex-direction: column; /* Stack buttons vertically */
-      gap: 10px; /* Add spacing between buttons */
-      top: 10px; /* Align to the top */
-      right: 20px; /* Align to the right */
+      flex-direction: column;
+      gap: 2vw;
+      top: 5vw; /* Top spacing */
+      right: 5vw; /* Right alignment */
     }
 
-    /* Common button styles */
     .schedule-btn, .call-now-btn {
         display: flex;
         align-items: center;
-        gap: 5px; /* Space between icon and text */
-        font-size: 14px;
-        padding: 6px 12px;
+        gap: 1vw;
+        font-size: 1.5vw; /* Scale font size */
+        padding: 0.75vw 0.75vw;
     }
 
-    /* Button Icon Styling */
     .button-icon {
-        width: 20px; /* Adjust the icon size */
-        height: 20px;
+        width: 3vw; /* Adjust icon size relative to screen size */
+        height: 3vw;
     }
 }
 
@@ -245,76 +239,72 @@ header {
     header {
         flex-direction: row;
         height: 130px;
-        padding: 0;
+        padding: 5vw; /* Adjust padding for smaller screen */
         position: relative;
     }
 
-
     .logo {
-        width: 80px; /* Smaller logo for mobile */
+        width: 10vw; /* Logo size relative to the small screen */
     }
 
     .company-name {
-        font-size: 18px;
+        font-size: 3vw; /* Smaller font size */
         text-align: center;
     }
 
     /* Navigation Links */
     .nav {
         position: absolute;
-        bottom: 0; /* Position at the bottom of the header */
-        left: 10%; /* Align to the left */
+        bottom: 5%; /* Position links at the bottom */
+        left: 5%;
+        gap: 6vw; /* Adjust spacing for smaller screen */
     }
 
-    /* Navigation Links */
     .nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
         position: absolute;
-        bottom: 10px;
-        gap: 30px; /* Add spacing between items */
+        bottom: 0;
+        gap: 5vw; /* More space between items */
     }
 
     .nav ul li {
-        margin-right: 0; /* Add spacing between links */
+        margin-right: 0;
     }
 
     .nav ul li a {
         color: #14356b;
         text-decoration: none;
-        font-size: 10px;
+        font-size: 3.5vw; /* Font size for small screens */
         white-space: nowrap;
     }
 
     .dropdown-menu li {
-        font-size: 10px;
+        font-size: 2.5vw; /* Dropdown item size */
     }
 
     /* Buttons Container */
     .header-buttons {
-      position: absolute;
-      display: flex;
-      flex-direction: row; /* Stack buttons vertically */
-      gap: 10px; /* Add spacing between buttons */
-      top: 70px; /* Align to the top */
-      right: 10px; /* Align to the right */
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        top: 10%; /* Adjust top spacing */
+        right: 5%; /* Right alignment */
     }
 
-    /* Common button styles */
     .schedule-btn, .call-now-btn {
         display: flex;
         align-items: center;
-        gap: 5px; /* Space between icon and text */
-        font-size: 8px;
-        padding: 5px 8px;
+        gap: 1vw;
+        font-size: 2vw; /* Font size scaling for smaller screens */
+        padding: 0.75vw 0.75vw;
     }
 
-    /* Button Icon Styling */
     .button-icon {
-        width: 10px; /* Adjust the icon size */
-        height: 10px;
+        width: 4vw; /* Icon size adjustment */
+        height: 4vw;
     }
-
 }

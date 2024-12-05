@@ -109,7 +109,7 @@
 @media (max-width: 480px) {
     .services-banner {
         padding: 6vh 0; /* Further reduce padding for mobile */
-        background-position: center -20vh;
+        background-position: center -10vh; /* Adjust background positioning */
     }
 
     .services-banner h2 {

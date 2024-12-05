@@ -124,6 +124,7 @@
     margin-bottom: 1.5rem;
 }
 
+/* Problems Section */
 #problems-section {
     display: flex;
     align-items: center;
@@ -160,7 +161,7 @@
 }
 
 #problems-section .electric-content-problems p,
-#problems-section .electric-content-problems li {
+#problems-section {
     font-size: 1rem;
     line-height: 1.6;
     color: #555;
@@ -212,19 +213,59 @@
     text-align: justify;
 }
 
-#services-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    color: #333;
-    font-size: 1rem;
+/* Styling for ul and li inside .electric-content */
+.electric-content ul {
+    list-style: disc; /* Add bullet points */
+    padding-left: 1.5rem; /* Consistent padding */
+    margin: 0; /* Reset margin */
 }
 
-#services-list li {
-    margin-bottom: 0.75rem;
+.electric-content li {
+    font-size: 1rem; /* Consistent font size */
+    line-height: 1.6; /* Maintain spacing for readability */
+    margin-bottom: 0.5rem; /* Uniform spacing between items */
+    color: #333; /* Default text color */
 }
+
+/* Styling for ul and li inside #problems-section */
+#problems-section ul {
+    list-style: disc; /* Add bullet points */
+    padding-left: 1.5rem; /* Consistent padding */
+    margin: 0; /* Reset margin */
+}
+
+#problems-section li {
+    font-size: 1rem; /* Consistent font size */
+    line-height: 1.6; /* Maintain spacing for readability */
+    margin-bottom: 0.5rem; /* Uniform spacing between items */
+    color: #555; /* Slightly lighter text color */
+}
+
+/* Styling for ul and li inside #services-section */
+#services-section ul {
+    list-style: disc; /* Add bullet points */
+    padding-left: 1.5rem; /* Consistent padding */
+    margin: 0; /* Reset margin */
+}
+
+#services-section li {
+    font-size: 1rem; /* Consistent font size */
+    line-height: 1.6; /* Maintain spacing for readability */
+    margin-bottom: 0.5rem; /* Uniform spacing between items */
+    color: #555; /* Slightly lighter text color */
+}
+
 
 /* Media Queries for Tablets */
 @media (max-width: 768px) {
+    ul {
+        padding-left: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    li {
+        font-size: 0.95rem; /* Adjust font size */
+    }
+
     .services-banner {
         background-position: center -100px;
         padding: 8vh 0;
@@ -241,25 +282,31 @@
         padding: 20px; /* Adjust padding */
     }
 
-    .electric-content h3 {
-        font-size: 1.25rem; /* Slightly smaller heading */
+    /* Styling for ul and li inside .electric-content */
+    .electric-content ul {
+        padding-left: 1rem; /* Adjust padding for smaller screens */
     }
 
-    .electric-content p {
-        font-size: 0.95rem; /* Adjust paragraph font size */
+    .electric-content li {
+        font-size: 0.95rem; /* Adjust font size */
     }
 
-    #services-section h2 {
-        font-size: 1.25rem; /* Smaller section heading */
+    /* Styling for ul and li inside #problems-section */
+    #problems-section ul {
+        padding-left: 1rem; /* Adjust padding for smaller screens */
     }
 
-    #services-list {
-        font-size: 0.95rem; /* Adjust list font size */
+    #problems-section li {
+        font-size: 0.95rem; /* Adjust font size */
     }
 
-    .schedule-service-btn {
-        font-size: 0.9rem; /* Adjust button font size */
-        padding: 0.6rem 1rem; /* Adjust padding */
+    /* Styling for ul and li inside #services-section */
+    #services-section ul {
+        padding-left: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    #services-section li {
+        font-size: 0.95rem; /* Adjust font size */
     }
 }
 
@@ -267,7 +314,7 @@
 @media (max-width: 480px) {
     .services-banner {
         padding: 6vh 5vw; /* Reduce padding */
-        background-position: center -80px;
+        background-position: center -10vh; /* Adjust background positioning */
     }
 
     .services-banner h2 {
@@ -285,32 +332,30 @@
         margin: 10px auto; /* Center with smaller margins */
         width: 90%; /* Ensure consistent width */
     }
-
-    .electric-content {
-        text-align: center; /* Center-align the text */
-        padding: 10px; /* Adjust padding for spacing */
+    /* Styling for ul and li inside .electric-content */
+    .electric-content ul {
+        padding-left: 0.8rem; /* Further reduce padding on mobile */
     }
 
-    .services-content h3,
-    #problems-section .electric-content-problems h3 {
-        font-size: 1.25rem; /* Adjust headline font size */
+    .electric-content li {
+        font-size: 0.9rem; /* Smaller font size */
     }
 
-    .services-content p,
-    #problems-section .electric-content-problems p {
-        font-size: 0.9rem; /* Adjust font size for content */
+    /* Styling for ul and li inside #problems-section */
+    #problems-section ul {
+        padding-left: 0.8rem; /* Further reduce padding on mobile */
     }
 
-    #services-list {
-        font-size: 0.9rem; /* Smaller list font size */
+    #problems-section li {
+        font-size: 0.9rem; /* Smaller font size */
     }
 
-    #services-section::before {
-        top: 100px;
-        background-size: 100%;
-        background-position: center;
-        transform: scaleX(-1); /* Mirrors the background image */
-        border-radius: 10px; /* Matches the parent section */
-        opacity: 0.5; /* Maintain readability */
+    /* Styling for ul and li inside #services-section */
+    #services-section ul {
+        padding-left: 0.8rem; /* Further reduce padding on mobile */
+    }
+
+    #services-section li {
+        font-size: 0.9rem; /* Smaller font size */
     }
 }

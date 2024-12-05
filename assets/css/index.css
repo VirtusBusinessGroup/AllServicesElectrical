@@ -140,13 +140,11 @@ body {
     justify-items: center;
     text-align: center;
     width: 100%;
-    padding: 5vw;
+    padding: 2vw;
 }
 
 .service-item {
-    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1vw 2.5vw;
     width: 100%;
     max-width: 200px;
@@ -155,7 +153,6 @@ body {
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item img {
@@ -167,11 +164,6 @@ body {
     font-size: 1vw; /* Adjust font size for better readability */
     margin: 0; /* Remove any margin to keep content tight */
     color: #14356b;
-}
-
-.service-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-us-section {
@@ -417,7 +409,6 @@ body {
 
     .services-icons {
         grid-template-columns: 1fr; /* Make icons stack in one column */
-        padding: 5vw 2vw;
     }
 
     .about-us-section,
@@ -472,6 +463,10 @@ body {
     .testimonial-right span {
         font-size: 4vw;
     }
+    .learn-more-btn {
+        font-size: 3.5vw !important; /* Increase font size for better readability */
+        padding: 3vw 4vw !important; /* Adjust padding for larger clickable area */
+    }
 }
 
 
@@ -510,10 +505,6 @@ body {
 
     .services-text p {
         font-size: 4vw;
-    }
-
-    .services-icons {
-        padding: 12vw 4vw;
     }
 
     .service-item {
@@ -576,6 +567,10 @@ body {
 
     .testimonial-right span {
         font-size: 5vw;
+    }
+    .learn-more-btn {
+        font-size: 4vw !important; /* Increase font size for better readability */
+        padding: 4vw 6vw !important; /* Larger padding for easier tapability */
     }
 }
 

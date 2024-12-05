@@ -29,7 +29,7 @@ header {
 }
 
 .company-name {
-    font-size: 2vw; /* Make the company name slightly smaller */
+    font-size: 1.5vw; /* Make the company name slightly smaller */
     font-weight: bold;
     color: #14356b; /* Use the primary blue color */
 }
@@ -60,7 +60,7 @@ header {
 .nav ul li a {
     color: #14356b;
     text-decoration: none;
-    font-size: 1.25vw; /* Smaller font size for navigation links */
+    font-size: 1vw; /* Smaller font size for navigation links */
     white-space: nowrap;
 }
 
@@ -126,7 +126,7 @@ header {
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 1vw; /* Adjust font size relative to screen size */
+    font-size: 0.75vw; /* Adjust font size relative to screen size */
     text-align: center;
 }
 
@@ -140,7 +140,7 @@ header {
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
-    font-size: 1vw; /* Adjust font size relative to screen size */
+    font-size: 0.75vw; /* Adjust font size relative to screen size */
 }
 
 /* Common button styles */
@@ -152,8 +152,8 @@ header {
 
 /* Button Icon Styling */
 .button-icon {
-    width: 1.5vw; /* Adjust icon size relative to viewport */
-    height: 1.5vw;
+    width: 1vw; /* Adjust icon size relative to viewport */
+    height: 1vw;
 }
 
 

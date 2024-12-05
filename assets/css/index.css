@@ -313,7 +313,7 @@ body {
 .testimonial-right p {
     font-size: 1vw;
     margin: 2vw 0;
-    color: #555;
+    padding: 1.25vw;
 }
 
 .testimonial-right span {
@@ -345,7 +345,7 @@ body {
     }
 
     .slide h2 {
-        font-size: 3.5vw;
+        font-size: 5.25vw;
     }
 
     .slide p {
@@ -358,11 +358,11 @@ body {
     }
 
     .services-text h2 {
-        font-size: 4vw;
+        font-size: 5.25vw;
     }
 
     .services-text p {
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 
     .service-item {
@@ -376,7 +376,7 @@ body {
     }
 
     .service-item h3 {
-        font-size: 3.5vw; /* Adjust heading size */
+        font-size: 5vw; /* Adjust heading size */
         margin: 1vw 0; /* Add some margin around the heading */
         line-height: 1.2; /* Reduce line-height for a tighter layout */
     }
@@ -428,23 +428,23 @@ body {
     }
 
     .about-us-content h3 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .about-us-content h4 {
-        font-size: 3.5vw;
+        font-size: 4.75vw;
     }
 
     .about-us-content p {
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 
     .testimonial-left h2 {
-        font-size: 4vw;
+        font-size: 5.25vw;
     }
 
     .testimonial-left p {
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 
     .leave-review-btn {
@@ -453,11 +453,11 @@ body {
     }
 
     .testimonial-right h3 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .testimonial-right p {
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 
     .testimonial-right span {
@@ -482,6 +482,10 @@ body {
         background-position: center;
     }
 
+    .slides {
+        height: 70vh;
+    }
+
     .slide h2 {
         font-size: 4vw;
     }
@@ -500,11 +504,11 @@ body {
     }
 
     .services-text h2 {
-        font-size: 5vw;
+        font-size: 5.25vw;
     }
 
     .services-text p {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .service-item {
@@ -537,19 +541,19 @@ body {
     }
 
     .about-us-content h4 {
-        font-size: 4.5vw;
+        font-size: 4.75vw;
     }
 
     .about-us-content p {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .testimonial-left h2 {
-        font-size: 5vw;
+        font-size: 5.25vw;
     }
 
     .testimonial-left p {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .leave-review-btn {
@@ -562,7 +566,7 @@ body {
     }
 
     .testimonial-right p {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .testimonial-right span {

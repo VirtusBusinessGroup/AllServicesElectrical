@@ -258,17 +258,9 @@
 
 /* Media Queries for Tablets */
 @media (max-width: 768px) {
-    ul {
-        padding-left: 1rem; /* Adjust padding for smaller screens */
-    }
-
-    li {
-        font-size: 0.95rem; /* Adjust font size */
-    }
-
     .services-banner {
-        background-position: center -100px;
         padding: 8vh 0;
+        background-position: center -15vh; /* Adjust background positioning */
     }
 
     .services-banner h2 {

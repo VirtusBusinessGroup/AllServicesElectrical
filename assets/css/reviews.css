@@ -76,7 +76,8 @@
 @media (max-width: 768px) {
     .services-banner {
         padding: 8vh 0; /* Reduce padding for tablet screens */
-        background-position: center -30vh;
+        background-position: center -15vh; /* Adjust background positioning */
+
     }
 
     .services-banner h2 {

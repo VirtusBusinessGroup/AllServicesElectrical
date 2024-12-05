@@ -239,7 +239,7 @@ header {
     header {
         flex-direction: row;
         height: 130px;
-        padding: 5vw; /* Adjust padding for smaller screen */
+        padding: 0 5vw; /* Adjust padding */
         position: relative;
     }
 
@@ -291,7 +291,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 2vw;
-        top: 10%; /* Adjust top spacing */
+        top: 20%; /* Adjust top spacing */
         right: 5%; /* Right alignment */
     }
 

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All Services Electrical: Licensed electricians providing top-notch residential and commercial electrical services in Los Angeles. Contact us today for reliable electrical repairs, LED lighting, and panel upgrades.">
+    <meta name="keywords" content="electricians Los Angeles, electrical repairs, panel upgrades, LED lighting, licensed electricians, reliable electrical services">
+    <meta name="author" content="Virtus Business Group">
+    <link rel="icon" href="../images/logo.jpg" type="image/jpg">
+
+    <title>All Services Electrical | Service</title>
+
+    <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "All Services Electrical",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11727 W Washington Blvd",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90066",
+      "addressCountry": "US"
+    },
+    "telephone": "+13107360918",
+    "openingHours": "Mo-Fr 08:00-18:00, Sa-Su 08:00-15:00",
+    "description": "All Services Electrical provides licensed electrical services for residential and commercial clients in Los Angeles, specializing in repairs, installations, LED lighting, and panel upgrades."
+
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/service.css">
+  <link rel="stylesheet" href="../css/schedule_service_form.css">
+
+
+</head>
+<body>
+
+<header>
+    <!-- Logo -->
+    <div class="logo-container">
+        <a href="../../index.html">
+            <img src="../images/logo.jpg" alt="All Services Electrical Logo" class="logo">
+        </a>
+        <a href="../../index.html" style="text-decoration: none">
+            <h1 class="company-name">All Services Electrical</h1>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="../../index.html#about-us-section" title="Learn about our electricians">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="electrical_services.html" title="Explore our electrical services">SERVICES
+                        <span class="caret">&#9662;</span></a>
+                    <ul id="services-dropdown" class="dropdown-menu"></ul>
+                </li>
+                <li><a href="reviews.html" title="Read customer reviews">REVIEWS</a></li>
+                <li><a href="contact_us.html" title="Contact us for reliable electrical solutions">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Buttons -->
+    <div class="header-buttons">
+        <a href="tel:3107360918" class="call-now-btn" onclick="return confirm('Do you want to call 310-736-0918?')">
+        <img src="../images/call.png" alt="Call us now" class="button-icon">
+        Call 310-736-0918
+    </a>
+        <button class="schedule-btn" onclick="openPopup()">
+            <img src="../images/event.png" alt="Schedule Service" class="button-icon">
+            SCHEDULE SERVICE
+        </button>
+    </div>
+
+</header>
+
+
+<div class="schedule-popup" id="schedulePopup">
+  <div class="popup-content">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <h2>SCHEDULE SERVICE</h2>
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
+    target="hidden_iframe"
+    onsubmit="closePopup()">
+        <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
+        <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
+        <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
+        <input type="text" id="address" name="entry.688701368" placeholder="Address*" required>
+        <input type="text" id="service" name="entry.720414955" placeholder="How can we help you?*">
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <button type="submit">SEND</button>
+    </form>
+    <p>
+        Form submissions will be answered during normal business hours.
+    </p>
+  </div>
+</div>
+
+    <!-- Banner -->
+    <section class="service-banner">
+        <div class="banner-text">
+            <h2 id="service-title">Service Name</h2>
+        </div>
+    </section>
+
+    <!-- Short Description -->
+    <section class="short-description">
+        <div class="content-container">
+            <p id="short-description">Short description about the service will go here.</p>
+        </div>
+    </section>
+
+    <!-- Static Section -->
+    <section class="static-section">
+        <div class="static-content">
+            <div class="static-image">
+                <img src="../images/electrical-work-2.jpg" alt="All Services Electrical Work">
+            </div>
+            <div class="static-text">
+                <h2>Why Choose Us?</h2>
+                <p>
+                    At All Services Electrical, we pride ourselves on delivering high-quality services with a focus
+                    on safety, efficiency, and customer satisfaction. Our team of licensed electricians is always ready
+                    to help you with all your electrical needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Long Description -->
+    <section class="long-description">
+        <div class="content-container">
+            <h2>More About This Service</h2>
+            <p id="long-description">The detailed service description will be dynamically inserted here.</p>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Logo and Company Information (Left) -->
+        <div class="footer-logo">
+            <a href="../../index.html">
+                <img src="../images/logo.jpg" alt="Logo" class="logo">
+            </a>
+            <div class="logo-text">
+                <span>All Services Electrical</span>
+                <p>11727 W Washington Blvd Ste D, <br /> Los Angeles, CA 90066</p>
+                <p><a href="tel:3107360918">310-736-0918</a></p>
+                <p class="footer-note">Licensed and Insured | License Number: 1081771</p>
+            </div>
+        </div>
+
+        <!-- Quick Links (Right) -->
+        <div class="footer-links">
+            <a href="../../index.html#about-us-section">About</a>
+            <a href="electrical_services.html">Services</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact_us.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>© 2024, All Services Electrical, All Rights Reserved</p>
+        <p>
+            Built by <a href="https://virtusbg.com" target="_blank" rel="noopener noreferrer">Virtus Business Group</a>
+        </p>
+    </div>
+</footer>
+
+
+
+
+
+
+<script src="../js/schedule_service_form-secondary.js"></script>
+<script src="../js/services_page.js"></script>
+<script src="../js/clear-form.js"></script>
+<script src="../js/load_service_page.js"></script>
+
+</body>
+</html>

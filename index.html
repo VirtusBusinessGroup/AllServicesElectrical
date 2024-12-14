@@ -43,7 +43,32 @@
   <link rel="stylesheet" href="assets/css/schedule_service_form.css">
 </head>
 
-<header>
+<div class="schedule-popup" id="schedulePopup">
+  <div class="popup-content">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <h2>SCHEDULE SERVICE</h2>
+    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
+    target="hidden_iframe"
+    onsubmit="closePopup()">
+        <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
+        <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
+        <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
+        <input type="text" id="address" name="entry.688701368" placeholder="Address*" required>
+        <input type="text" id="service" name="entry.720414955" placeholder="How can we help you?*">
+        <!-- Invisible iframe for handling form submission without redirecting the user -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <button type="submit">SEND</button>
+    </form>
+    <p>
+        Form submissions will be answered during normal business hours.
+    </p>
+  </div>
+</div>
+
+
+
+<div class="header-carousel-wrapper">
+    <header>
     <!-- Logo -->
     <div class="logo-container">
         <a href="index.html">
@@ -83,32 +108,6 @@
     </div>
 
 </header>
-
-<div class="schedule-popup" id="schedulePopup">
-  <div class="popup-content">
-    <button class="close-popup" onclick="closePopup()">×</button>
-    <h2>SCHEDULE SERVICE</h2>
-    <form id="scheduleForm" action="https://docs.google.com/forms/d/e/1FAIpQLSee1jRkXaCw_QPYmS94D8vsjcuH9Yazus2Hb5Q2kn45uQ3Y5A/formResponse" method="POST"
-    target="hidden_iframe"
-    onsubmit="closePopup()">
-        <input type="text" id="name" name="entry.1592039410" placeholder="Name*" required>
-        <input type="email" id="email" name="entry.740843060" placeholder="Email*" required>
-        <input type="tel" id="phone" name="entry.614905836" placeholder="Phone Number*" required>
-        <input type="text" id="address" name="entry.688701368" placeholder="Address*" required>
-        <input type="text" id="service" name="entry.720414955" placeholder="How can we help you?*">
-        <!-- Invisible iframe for handling form submission without redirecting the user -->
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
-      <button type="submit">SEND</button>
-    </form>
-    <p>
-        Form submissions will be answered during normal business hours.
-    </p>
-  </div>
-</div>
-
-
-
-<main>
 
     <section class="carousel">
         <div class="slides">
@@ -157,7 +156,14 @@
                 <button class="schedule-btn-window" onclick="openPopup()">SCHEDULE SERVICE</button>
             </div>
         </div>
-    </section>
+</section>
+
+</div>
+
+
+
+<main>
+
 
     <section class="services-full-width">
         <div class="services-text">

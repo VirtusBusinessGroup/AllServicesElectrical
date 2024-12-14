@@ -9,12 +9,37 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Wrapper for Header and Carousel */
+.header-carousel-wrapper {
+    background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
+    background-position: center -1vh; /* Adjust position responsively */
+    background-size: cover; /* Ensure the background covers the container */
+    background-repeat: no-repeat;
+    position: relative; /* Ensure the child elements are positioned correctly */
+    height: 100vh; /* Use viewport height for consistent banner size */
+}
+
+/* Optionally, add an overlay for better text visibility */
+.header-carousel-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.3); !* Adjust transparency and color as needed *!*/
+    z-index: 1; /* Place overlay below header and carousel */
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
-    height: 40vh; /* Use viewport height */
+    height: 50vh; /* Use viewport height */
     width: 60%; /* Full-width */
-    margin: 3vw auto;
+    /*margin: 3vw auto;*/
+    margin: 12vw auto 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     border-radius: 8px;
     align-items: center;
     display: flex;
@@ -29,17 +54,17 @@ body {
 .slide {
     position: relative;
     min-width: 100%;
-    height: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    background-image: url('../images/light-pendulum.jpg');
+    /*background-image: url('../images/light-pendulum.jpg');*/
     background-size: cover;
-    background-position: center -12vw;
+    background: rgba(201, 218, 248, 0.7) center -12vw;
     padding: 5vw; /* Adjust padding based on viewport width */
     text-align: center;
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* Prevent shrinking and growing */
 }
 
 .slide::before {
@@ -49,7 +74,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -59,14 +83,14 @@ body {
 }
 
 .slide p {
-    font-size: 1vw;
-    color: #fff;
+    font-size: 1.1vw;
+    color: #000000;
     margin-bottom: 1.25vw;
 }
 
 .slide h2 {
-    color: #fff;
-    font-size: 1.25vw;
+    color: #000000;
+    font-size: 2vw;
     margin-bottom: 1vw;
 }
 
@@ -74,7 +98,7 @@ body {
     background: #ff8f11;
     color: white;
     border: none;
-    padding: 0.75vw 0.75vw; /* Use viewport width for padding */
+    padding: 0.75vw 2vw; /* Use viewport width for padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;

@@ -1,0 +1,87 @@
+/* General Styling */
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Banner Section */
+.service-banner {
+    background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the background covers the container */
+    background-position: center -40vh;
+    background-color: rgba(20, 53, 107, 0.6); /* Fallback color */
+    background-blend-mode: overlay;
+    color: #fff;
+    padding: 10vh 0;
+    margin-top: 4vw;
+}
+
+.banner-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
+/* Short Description Section */
+.short-description {
+    padding: 4vh 5vw; /* Vertical and horizontal padding based on viewport */
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.short-description p {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Static Section */
+.static-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    align-items: center;
+    gap: 3vw; /* Responsive gap */
+    padding: 5vh 5vw;
+    background-color: #eaf2ff;
+}
+
+.static-image img {
+    width: 100%;
+    max-width: 500px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center the image on small screens */
+}
+
+.static-text {
+    flex: 1; /* Make the text take up equal space */
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Responsive font size */
+    line-height: 1.6;
+    text-align: center;
+    color: #333;
+    padding: 2vh 1vw; /* Adjust padding for responsiveness */
+}
+
+/* Long Description Section */
+.long-description {
+    padding: 5vh 5vw; /* Vertical and horizontal padding */
+    background-color: #ffffff;
+}
+
+.long-description h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size */
+    text-align: center;
+    margin-bottom: 2vh;
+    color: #14356b;
+}
+
+.long-description p {
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Responsive font size */
+    line-height: 1.8;
+    color: #444;
+    text-align: justify; /* Justify for readability */
+    margin-bottom: 2vh;
+}

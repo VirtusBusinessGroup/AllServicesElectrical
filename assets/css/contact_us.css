@@ -12,7 +12,7 @@
     background-blend-mode: overlay;
     color: #fff;
     padding: 10vh 0; /* Use viewport height for consistent banner size */
-    margin-top: 3vw; /* Adjust margin using viewport width */
+    margin-top: 4vw; /* Adjust margin using viewport width */
 }
 
 .contact-banner h2 {

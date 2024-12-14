@@ -7,13 +7,15 @@ html, body {
 }
 
 header {
-    background: rgb(255, 255, 255);
+    /*background: rgb(255, 255, 255);*/
     position: relative;
     height: 15vh; /* Use percentage of viewport height */
-    padding: 2vw; /* Adjust padding relative to the screen size */
+    /* Adjust padding relative to the screen size */
+    padding: 3vw 2vw 2vw;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: flex-start; /* Align items at the top */
+    z-index: 1000; /* Ensure header is on top of other elements */
 }
 
 /* Logo and Company Name */
@@ -24,12 +26,12 @@ header {
 }
 
 .logo {
-    width: 5vw; /* Slightly smaller logo */
+    width: 6vw; /* Slightly smaller logo */
     height: auto;
 }
 
 .company-name {
-    font-size: 1.5vw; /* Make the company name slightly smaller */
+    font-size: 2vw; /* Make the company name slightly smaller */
     font-weight: bold;
     color: #14356b; /* Use the primary blue color */
 }
@@ -42,6 +44,7 @@ header {
     justify-content: flex-start; /* Align links to the left */
     gap: 2vw; /* Space between links */
     padding-top: 1vw; /* Space between logo and links */
+    padding-left: 6vw;
 }
 
 .nav ul {
@@ -50,7 +53,7 @@ header {
     margin: 0;
     display: flex;
     flex-direction: row; /* Links arranged in a row */
-    gap: 2vw; /* Space between items */
+    gap: 4vw; /* Space between items */
 }
 
 .nav ul li {
@@ -60,7 +63,7 @@ header {
 .nav ul li a {
     color: #14356b;
     text-decoration: none;
-    font-size: 1vw; /* Smaller font size for navigation links */
+    font-size: 1.125vw; /* Smaller font size for navigation links */
     white-space: nowrap;
 }
 
@@ -72,9 +75,9 @@ header {
     color: #14356b;
     top: 100%; /* Position dropdown below parent */
     left: 0;
-    min-width: 15vw; /* Set dropdown width relative to viewport */
+    /*min-width: 15vw; !* Set dropdown width relative to viewport *!*/
     list-style: none;
-    padding: 2vw;
+    padding: 1vw;
     border: 1px solid #ccc;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -84,7 +87,7 @@ header {
 }
 
 .dropdown-menu li {
-    padding: 1vw 2vw;
+    padding: 1vw 1vw;
     cursor: pointer;
     border-radius: 4px;
     background: #fff;
@@ -107,10 +110,12 @@ header {
 .header-buttons {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
-  gap: 1.5vw; /* Add spacing between buttons */
+  gap: 0.25vw; /* Add spacing between buttons */
   top: 2vw; /* Align to the top relative to the header */
   right: 2vw; /* Align to the right with 5% margin */
   position: absolute;
+  padding-top: 1vw; /* Add padding to the top */
+
 }
 
 /* Styling for Call Now Link */
@@ -122,11 +127,11 @@ header {
     background: #ff8f11;
     color: #ffffff;
     border: none;
-    padding: 0.75vw 0.75vw; /* Smaller padding */
+    padding: 0.75vw 2vw; /* Smaller padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 0.75vw; /* Adjust font size relative to screen size */
+    font-size: 1.25vw; /* Adjust font size relative to screen size */
     text-align: center;
 }
 
@@ -135,25 +140,26 @@ header {
     background: #ff8f11;
     color: white;
     border: none;
-    padding: 0.75vw 0.75vw; /* Smaller padding */
+    padding: 0.75vw 2vw; /* Smaller padding */
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
+    font-size: 1.25vw; /* Adjust font size relative to screen size */
+    text-decoration: none;
     text-align: center;
-    font-size: 0.75vw; /* Adjust font size relative to screen size */
 }
 
 /* Common button styles */
 .schedule-btn, .call-now-btn {
     display: flex;
     align-items: center;
-    gap: 1vw; /* Space between icon and text */
+    gap: 0.25vw; /* Space between icon and text */
 }
 
 /* Button Icon Styling */
 .button-icon {
-    width: 1vw; /* Adjust icon size relative to viewport */
-    height: 1vw;
+    width: 1.25vw; /* Adjust icon size relative to viewport */
+    height: 1.25vw;
 }
 
 

@@ -186,7 +186,7 @@ header {
     /* Navigation Links */
     .nav {
         position: absolute;
-        bottom: 2vw; /* Position at the bottom with padding relative to screen */
+        bottom: -2vw; /* Move links lower by increasing bottom space */
         left: 5%; /* Align to the left */
         gap: 5vw; /* Increase spacing between items */
     }
@@ -221,15 +221,15 @@ header {
       position: absolute;
       display: flex;
       flex-direction: column;
-      gap: 2vw;
-      top: 5vw; /* Top spacing */
+      gap: 1vw; /* Reduce the gap to bring buttons closer */
+      top: 1vw; /* Raise the button container */
       right: 5vw; /* Right alignment */
     }
 
     .schedule-btn, .call-now-btn {
         display: flex;
         align-items: center;
-        gap: 1vw;
+        gap: 0.8vw; /* Reduce gap between buttons */
         font-size: 1.5vw; /* Scale font size */
         padding: 0.75vw 0.75vw;
     }

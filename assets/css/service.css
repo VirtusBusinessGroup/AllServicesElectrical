@@ -6,10 +6,10 @@
 
 /* Banner Section */
 .service-banner {
-    background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensure the background covers the container */
+    background-image: url('../images/la-backdrop.jpg');
+    background-size: cover;
     background-position: center -40vh;
-    background-color: rgba(20, 53, 107, 0.6); /* Fallback color */
+    background-color: rgba(20, 53, 107, 0.6);
     background-blend-mode: overlay;
     color: #fff;
     padding: 10vh 0;
@@ -26,62 +26,260 @@
 
 /* Short Description Section */
 .short-description {
-    padding: 4vh 5vw; /* Vertical and horizontal padding based on viewport */
-    background-color: #f9f9f9;
+    padding: 4vh 5vw;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* Responsive Box Styling for Content */
+.short-description .content-container {
+    border: 0.3vw solid #ddd;
+    border-radius: 1vw;
+    padding: 3vw;
+    background-color: #fff;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    max-width: 80vw;
+    width: 100%;
+}
+
+/* Responsive Paragraph Text Styling */
 .short-description p {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
-    line-height: 1.6;
+    font-size: 1.25vw;
+    line-height: 1.8;
     color: #333;
+    margin-bottom: 3vh;
 }
 
 /* Static Section */
 .static-section {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    align-items: center;
-    gap: 3vw; /* Responsive gap */
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: space-between;
     padding: 5vh 5vw;
-    background-color: #eaf2ff;
+    gap: 2vw;
+}
+
+/* Static Content */
+.static-content {
+    display: flex;
+    flex-direction: row; /* Default to row */
+    width: 100%;
+}
+
+/* Static Image */
+.static-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .static-image img {
-    width: 100%;
-    max-width: 500px; /* Limit maximum width */
-    height: auto; /* Maintain aspect ratio */
+    width: 80%;
+    height: auto;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    margin: auto; /* Center the image on small screens */
 }
 
+/* Static Text */
 .static-text {
-    flex: 1; /* Make the text take up equal space */
-    font-size: clamp(1rem, 2vw, 1.25rem); /* Responsive font size */
+    flex: 1;
+    max-width: 50%;
     line-height: 1.6;
-    text-align: center;
     color: #333;
-    padding: 2vh 1vw; /* Adjust padding for responsiveness */
+    text-align: left;
+    padding: 2vh 2vw;
+}
+
+.static-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #14356b;
+}
+
+.static-text p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 /* Long Description Section */
 .long-description {
-    padding: 5vh 5vw; /* Vertical and horizontal padding */
+    padding: 5vh 5vw;
     background-color: #ffffff;
 }
 
 .long-description h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size */
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2vh;
     color: #14356b;
 }
 
 .long-description p {
-    font-size: clamp(1rem, 2vw, 1.25rem); /* Responsive font size */
+    font-size: 1.25vw;
     line-height: 1.8;
     color: #444;
-    text-align: justify; /* Justify for readability */
+    text-align: justify;
     margin-bottom: 2vh;
+}
+
+/* Tablet Responsiveness (768px and below) */
+@media (max-width: 768px) {
+    .service-banner {
+        padding: 8vh 0;
+        background-position: center -15vh;
+    }
+
+    .service-banner h2 {
+        font-size: 2rem;
+    }
+
+    .short-description {
+        padding: 4vh 3vw;
+    }
+
+    .short-description .content-container {
+        padding: 4vw;
+        max-width: 90vw;
+    }
+
+    .short-description p {
+        font-size: 2vw;
+    }
+
+    /* Static Section should now be column layout for tablets */
+    .static-section {
+        flex-direction: column; /* Force column layout */
+        align-items: center;
+        justify-content: center;
+        padding: 4vh 4vw;
+    }
+
+    .static-image {
+        max-width: 100%;
+        margin-bottom: 2vh; /* Add space below the image */
+    }
+
+    .static-text {
+        max-width: 100%;
+        padding: 3vh 2vw;
+        text-align: center; /* Center the text */
+    }
+
+    .static-image img {
+        width: 100%; /* Ensure the image scales with the container */
+    }
+
+    .static-text h2 {
+        font-size: 1.25rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text p {
+        font-size: 1rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text h3 {
+        font-size: 1.125rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text ul {
+        text-align: left; /* Center the text */
+        padding-left: 1.5rem;
+    }
+
+    .long-description h2 {
+        font-size: 1.75rem;
+    }
+
+    .long-description p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Responsiveness (480px and below) */
+@media (max-width: 480px) {
+    .service-banner {
+        padding: 6vh 0;
+        background-position: center -10vh;
+    }
+
+    .service-banner h2 {
+        font-size: 1.75rem;
+    }
+
+    .short-description {
+        padding: 4vh 2vw;
+    }
+
+    .short-description .content-container {
+        padding: 5vw;
+        max-width: 95vw;
+    }
+
+    .short-description p {
+        font-size: 3vw;
+    }
+
+    /* Static Section should now be column layout for mobile */
+    .static-section {
+        flex-direction: column; /* Force column layout */
+        align-items: center;
+        justify-content: center;
+        padding: 3vh 3vw;
+    }
+
+    .static-content {
+        flex-direction: column; /* Stack image and text */
+    }
+
+    .static-image {
+        max-width: 100%; /* Ensure the image takes full width */
+        margin-bottom: 2vh; /* Add space below the image */
+    }
+
+    .static-text {
+        max-width: 100%;
+        padding: 3vh 2vw;
+    }
+
+    .static-text h2 {
+        font-size: 1.25rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text p {
+        font-size: 1rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text h3 {
+        font-size: 1.125rem;
+        text-align: center; /* Center the text */
+    }
+
+    .static-text ul {
+        text-align: left; /* Center the text */
+        padding-left: 1.5rem;
+    }
+
+    .static-image img {
+        width: 100%; /* Ensure the image scales with the container */
+    }
+
+    .static-text h2 {
+        font-size: 1rem;
+    }
+
+    .long-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .long-description p {
+        font-size: 1rem;
+    }
 }

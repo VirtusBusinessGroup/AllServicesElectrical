@@ -216,7 +216,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1vw 10vw;
+    padding: 1vw 4vw;
     gap: 5vw;
     background-color: #ffffff;
     border-radius: 8px;
@@ -231,7 +231,7 @@ body {
 
 .about-us-image img {
     width: 100%; /* Make the image take full width of its container */
-    max-width: 600px; /* Optional: Set a max width to avoid oversizing */
+    max-width: 100vw;
     margin-top: 0; /* Remove unnecessary top margin */
     border-radius: 20px;
 }
@@ -358,12 +358,6 @@ body {
     color: #14356b;
 }
 
-.testimonial-right p {
-    font-size: 1vw;
-    margin: 2vw 0;
-    padding: 1.25vw;
-}
-
 .testimonial-right span {
     font-size: 2vw;
     color: #14356b;
@@ -372,9 +366,16 @@ body {
     display: block;
 }
 
-.testimonial-author {
-    font-size: 1vw;
-    color: #14356b;
+.testimonial-quote {
+    font-size: 1.25vw;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1vw;
+}
+
+.testimonial-author{
+    font-size: 1.5vw;
+    color: #14356b !important;
 }
 
 /* Responsive Adjustments */

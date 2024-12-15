@@ -115,6 +115,87 @@ def home_advisor_reviews(link):
     review_data.to_csv("assets/data/home_advisor_reviews.csv", index=False)
 
 
+def yelp_reviews(link):
+    
+    full_review_file = "assets/data/home_advisor_reviews.csv"
+    
+    full_df = pd.read_csv(full_review_file)
+    
+    response = requests.get(link)
+    
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Create a dataframe to store the reviews
+    review_data = pd.DataFrame(columns = ["Rating", "Name", "Location", "Date", "Review"])
+    
+    # Find the ul with the class "list__09f24__ynIEd"
+    reviews = soup.find_all('ul', class_ = 'list__09f24__ynIEd')
+    
+    # Print all the span
+    for review in reviews:
+        # Find the a with the class "y-css-1f3635f"
+        name = review.find('span', class_ = 'y-css-1f3635f')
+        
+        if name is None:
+            continue
+        
+        # Find the div with the class "y-css-14zpyii"
+        location = review.find('div', class_ = 'y-css-14zpyii')
+        
+        if location is None:
+            continue
+        
+        # Find the span with the class "y-css-1d8mpv1"
+        date = review.find('span', class_ = 'y-css-1d8mpv1')
+        
+        if date is None:
+            continue
+        
+        # Find the span with the class "raw__09f24__T4Ezm"
+        rev = review.find('span', class_ = 'raw__09f24__T4Ezm')
+        
+        if rev is None:
+            continue
+        
+        # Find the div with class "y-css-dnttlc"
+        lr = review.find_next('div', class_ = 'y-css-dnttlc')
+        
+        if lr is None:
+            continue
+        
+        rating = lr["aria-label"][0]
+        
+        # Create a dictionary to store the review
+        review_full = {
+            "Rating": float(rating),
+            "Name": name.text,
+            "Location": location.text,
+            "Date": date.text,
+            "Service": "Install Electrical Switches, Outlets, or Fixtures",
+            "Review": rev.text
+            }
+        
+        # Create a dataframe from the review
+        row = pd.DataFrame(review_full, index = [0])
+        
+        # Concatenate the review to the review_data dataframe
+        if review_data.empty:
+            review_data = row
+        else:
+            review_data = pd.concat([review_data, row], ignore_index = True)
+    
+    if review_data.empty:
+        yelp_reviews(link)
+    
+    full_df = pd.concat([full_df, review_data], ignore_index = True)
+    
+    # Sort the reviews by Rating and by Date
+    full_df = full_df.sort_values(["Rating", "Date"], ascending = [False, False]).reset_index(drop = True)
+    
+    full_df.to_csv(full_review_file, index = False)
+
+
 home_advisor_reviews(HOME_ADVISOR)
+yelp_reviews(YELP)
 
 

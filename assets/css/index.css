@@ -158,18 +158,20 @@ body {
 .services-icons {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5vw;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns grid */
+    gap: .5vw; /* Adjust the spacing between cards */
     align-items: center;
     justify-items: center;
     text-align: center;
     width: 100%;
-    padding: 2vw;
+    padding: 4vw;
 }
 
 .service-item {
-    border-radius: 10px;
-    padding: 1vw 2.5vw;
+    background-color: #f9f9f9; /* Light background color for the card */
+    border: 1px solid #ddd; /* Light gray border for the card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1.5vw; /* Internal padding */
     width: 100%;
     max-width: 200px;
     display: flex; /* Enable flexbox to center content */
@@ -177,18 +179,38 @@ body {
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Change the cursor on hover */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Darker and deeper shadow */
+    background-color: #fff; /* Optional: change the background color */
 }
 
 .service-item img {
-    width: 4vw;
+    width: 4vw; /* Adjust the size of the icon */
     margin-bottom: 1vw; /* Space between image and text */
+    transition: transform 0.3s ease; /* Smooth image animation */
+}
+
+.service-item:hover img {
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
 }
 
 .service-item h3 {
     font-size: 1vw; /* Adjust font size for better readability */
     margin: 0; /* Remove any margin to keep content tight */
     color: #14356b;
+    transition: color 0.3s ease; /* Smooth text color animation */
 }
+
+.service-item:hover h3 {
+    color: #ff9800; /* Optional: Change text color on hover */
+}
+
 
 .about-us-section {
     display: flex;
@@ -202,21 +224,23 @@ body {
 }
 
 .about-us-image {
-    flex: 1;
+    flex: 2; /* Increase the size of the image */
     text-align: center;
+    order: -1; /* Flip position: Move the image to the left */
 }
 
 .about-us-image img {
-    width: 90%;
-    margin-top: 5vw;
+    width: 100%; /* Make the image take full width of its container */
+    max-width: 600px; /* Optional: Set a max width to avoid oversizing */
+    margin-top: 0; /* Remove unnecessary top margin */
     border-radius: 20px;
 }
 
 .about-us-content {
-    flex: 2;
+    flex: 1.5; /* Keep the text area smaller than the image */
     padding: 2vw;
     text-align: left;
-    max-width: 80%;
+    max-width: 100%; /* Allow content to take full space */
 }
 
 .about-us-content h3 {

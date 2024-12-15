@@ -1,5 +1,6 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -12,9 +13,9 @@ html, body {
 footer {
     background-color: #f4f4f4; /* Light gray background */
     padding: 0; /* Adjust padding based on viewport width */
+    margin: 0; /* Remove default margin */
     color: #333; /* Dark text for readability */
     width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in width */
 }
 
 .footer-content {

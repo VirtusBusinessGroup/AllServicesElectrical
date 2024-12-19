@@ -112,7 +112,25 @@ def home_advisor_reviews(link):
     
     # Save the reviews to a csv file
     # review_data.to_csv("../data/home_advisor_reviews.csv", index=False)
-    review_data.to_csv("assets/data/home_advisor_reviews.csv", index=False)
+    
+    # Close the driver
+    driver.quit()
+    
+    # Get the Yelp reviews
+    yelp_df = pd.DataFrame(columns=["Rating", "Name", "Location", "Date", "Review"])
+    
+    while yelp_df.empty:
+        yelp_df = yelp_reviews(YELP)
+        
+    # Merge the Home Advisor and Yelp reviews
+    review_data = pd.concat([review_data, yelp_df], ignore_index=True)
+    
+    # Sort the reviews by Rating and by Date
+    review_data = review_data.sort_values(["Rating", "Date"], ascending=[False, False]).reset_index(drop=True)
+    
+    review_data.to_csv("assets/data/home_advisor_reviews.csv", index = False)
+    
+    
 
 
 def yelp_reviews(link):
@@ -184,18 +202,9 @@ def yelp_reviews(link):
         else:
             review_data = pd.concat([review_data, row], ignore_index = True)
     
-    if review_data.empty:
-        yelp_reviews(link)
-    
-    full_df = pd.concat([full_df, review_data], ignore_index = True)
-    
-    # Sort the reviews by Rating and by Date
-    full_df = full_df.sort_values(["Rating", "Date"], ascending = [False, False]).reset_index(drop = True)
-    
-    full_df.to_csv(full_review_file, index = False)
+    return full_df
 
 
 home_advisor_reviews(HOME_ADVISOR)
-yelp_reviews(YELP)
 
 

@@ -15,7 +15,7 @@ header {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     justify-content: flex-start; /* Align items at the top */
-    z-index: 1000; /* Ensure header is on top of other elements */
+    z-index: 900; /* Ensure header is on top of other elements */
 }
 
 /* Logo and Company Name */

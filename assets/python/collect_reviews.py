@@ -135,10 +135,6 @@ def home_advisor_reviews(link):
 
 def yelp_reviews(link):
     
-    full_review_file = "assets/data/home_advisor_reviews.csv"
-    
-    full_df = pd.read_csv(full_review_file)
-    
     response = requests.get(link)
     
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -202,7 +198,7 @@ def yelp_reviews(link):
         else:
             review_data = pd.concat([review_data, row], ignore_index = True)
     
-    return full_df
+    return review_data
 
 
 home_advisor_reviews(HOME_ADVISOR)

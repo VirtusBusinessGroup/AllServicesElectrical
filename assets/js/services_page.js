@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Load services from CSV
-    fetch('../data/services.csv') // Adjust CSV file path if necessary
+    fetch('../assets/data/services.csv') // Adjust CSV file path if necessary
         .then(response => response.text())
         .then(data => {
             const rows = parseCSV(data).slice(1); // Skip the header row
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const link = document.createElement('a');
 
                     // Create a link to the service details page with a query parameter
-                    link.href = `../html/service_page.html?service=${encodeURIComponent(serviceName)}`;
+                    link.href = `../service/index.html?service=${encodeURIComponent(serviceName)}`;
                     link.textContent = serviceName;
 
                     li.appendChild(link);

@@ -11,7 +11,7 @@ function loadServices() {
   const serviceDropdown = document.getElementById("service");
 
   // Fetch the CSV file
-  fetch("assets/data/services.csv")
+  fetch("../assets/data/services.csv")
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed to fetch services.csv");

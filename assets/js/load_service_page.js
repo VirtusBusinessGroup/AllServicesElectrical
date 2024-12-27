@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    fetch('../data/services.csv')
+    fetch('../assets/data/services.csv')
       .then(response => response.text())
       .then(data => {
         const rows = parseCSV(data);

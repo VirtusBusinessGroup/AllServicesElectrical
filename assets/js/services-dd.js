@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Load services from CSV
-  fetch('assets/data/services.csv')
+  fetch('../assets/data/services.csv')
     .then(response => response.text())
     .then(data => {
       const rows = parseCSV(data).slice(1); // Skip the header row
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const link = document.createElement('a');
 
           // Create a link to the service details page with a query parameter
-          link.href = `assets/html/service_page.html?service=${encodeURIComponent(serviceName)}`;
+          link.href = `../service/index.html?service=${encodeURIComponent(serviceName)}`;
           link.textContent = serviceName;
 
           li.appendChild(link);
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Fetch CSV and add event listeners to hardcoded service cards
-  fetch('assets/data/services.csv')
+  fetch('../assets/data/services.csv')
     .then(response => response.text())
     .then(data => {
       const rows = parseCSV(data).slice(1); // Skip the header row
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const match = rows.find(row => row[0] === serviceName);
         if (match) {
           // Build the link dynamically
-          const serviceURL = `assets/html/service_page.html?service=${encodeURIComponent(serviceName)}`;
+          const serviceURL = `../service/index.html?service=${encodeURIComponent(serviceName)}`;
 
           // Add click event listener to navigate to the URL
           item.addEventListener('click', () => {

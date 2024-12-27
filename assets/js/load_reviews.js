@@ -1,5 +1,5 @@
 async function loadReviews() {
-    const response = await fetch('../data/home_advisor_reviews.csv'); // Adjust the path to your file
+    const response = await fetch('../assets/data/home_advisor_reviews.csv'); // Adjust the path to your file
     const csvText = await response.text();
 
     // Parse CSV manually (handles quotes, commas, and spaces correctly)

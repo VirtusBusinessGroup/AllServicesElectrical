@@ -1,37 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to parse CSV with support for quoted fields
-    const parseCSV = (csvText) => {
+    // Function to parse TSV (Tab-Separated Values)
+    const parseTSV = (tsvText) => {
         const rows = [];
-        const lines = csvText.split('\n');
+        const lines = tsvText.split('\n');
         for (const line of lines) {
-            const row = [];
-            let current = '';
-            let inQuotes = false;
-
-            for (let i = 0; i < line.length; i++) {
-                const char = line[i];
-
-                if (char === '"' && line[i + 1] === '"') {
-                    // Handle escaped double quotes
-                    current += '"';
-                    i++;
-                } else if (char === '"') {
-                    // Toggle quoted state
-                    inQuotes = !inQuotes;
-                } else if (char === ',' && !inQuotes) {
-                    // End of field
-                    row.push(current.trim());
-                    current = '';
-                } else {
-                    current += char;
-                }
-            }
-
-            // Add the last field
-            if (current) {
-                row.push(current.trim());
-            }
-
+            const row = line.split('\t').map(cell => cell.trim()); // Split by tab and trim each cell
             if (row.length > 0) {
                 rows.push(row);
             }
@@ -39,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return rows;
     };
 
-    // Load services from CSV
-    fetch('../assets/data/services.csv') // Adjust CSV file path if necessary
+    // Load services from TSV
+    fetch('../assets/data/services.csv') // Adjust TSV file path if necessary
         .then(response => response.text())
         .then(data => {
-            const rows = parseCSV(data).slice(1); // Skip the header row
+            const rows = parseTSV(data).slice(1); // Skip the header row
             const dropdown = document.getElementById('services-dropdown');
 
             rows.forEach(row => {

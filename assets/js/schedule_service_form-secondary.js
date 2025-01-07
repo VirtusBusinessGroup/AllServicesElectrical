@@ -22,7 +22,8 @@ function loadServices() {
     .then((data) => {
       const rows = data.split("\n").slice(1); // Skip the header row
       rows.forEach((row) => {
-        const service = row.trim();
+        const columns = row.split("\t"); // Split by tab
+        const service = columns[0]?.trim(); // Get the first column (Service name)
         if (service) {
           // Create an option element for each service
           const popupOption = document.createElement("option");

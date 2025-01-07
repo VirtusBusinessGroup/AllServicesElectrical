@@ -13,7 +13,7 @@
     background-blend-mode: overlay;
     color: #fff;
     padding: 10vh 0;
-    margin-top: 4vw;
+    margin-top: 5vw;
 }
 
 .banner-text h2 {
@@ -94,14 +94,26 @@
 }
 
 .static-text h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #14356b;
 }
 
 .static-text p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
+}
+
+.static-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #14356b;
+}
+
+.static-text ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+    font-size: 1.25rem;
 }
 
 /* Long Description Section */

@@ -2,31 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to parse CSV
   const parseCSV = (csvText) => {
     const rows = [];
-    const lines = csvText.split('\n');
+    const lines = csvText.split('\n'); // Split the text into lines
+
     for (const line of lines) {
-      const row = [];
-      let current = '';
-      let inQuotes = false;
-
-      for (let i = 0; i < line.length; i++) {
-        const char = line[i];
-
-        if (char === '"' && line[i + 1] === '"') {
-          current += '"';
-          i++;
-        } else if (char === '"') {
-          inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-          row.push(current.trim());
-          current = '';
-        } else {
-          current += char;
-        }
-      }
-
-      if (current) row.push(current.trim());
-      if (row.length > 0) rows.push(row);
+      const row = line.split('\t').map(cell => cell.trim()); // Split by tabs and trim spaces
+      if (row.length > 0) rows.push(row); // Add non-empty rows
     }
+
     return rows;
   };
 

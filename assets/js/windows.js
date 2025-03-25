@@ -10,5 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     index = (index + 1) % 3; // Cycle through 3 slides
     showSlide();
-  }, 12000); // Change slide every 12 seconds
+  }, 24000); // Change slide every 12 seconds
 });

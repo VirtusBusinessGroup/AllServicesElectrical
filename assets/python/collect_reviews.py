@@ -13,6 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 HOME_ADVISOR = "https://www.homeadvisor.com/rated.AllServiceElectrical.38781038.html"
 YELP = "https://www.yelp.com/biz/all-services-electrical-los-angeles#reviews"
+SHARED_IP = '192.185.144.45
 
 
 def home_advisor_reviews(link):

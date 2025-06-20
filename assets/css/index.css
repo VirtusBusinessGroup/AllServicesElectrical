@@ -12,7 +12,7 @@ body {
 /* Wrapper for Header and Carousel */
 .header-carousel-wrapper {
     background-image: url('../images/la-backdrop.jpg'); /* Replace with your image path */
-    background-position: center -1vh; /* Adjust position responsively */
+    background-position: center -30vh; /* Adjust position responsively */
     background-size: cover; /* Ensure the background covers the container */
     background-repeat: no-repeat;
     position: relative; /* Ensure the child elements are positioned correctly */
@@ -27,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background: rgba(0, 0, 0, 0.3); !* Adjust transparency and color as needed *!*/
+    background: rgba(255, 255, 255, 0.5); /* Adjust transparency and color as needed */
     z-index: 1; /* Place overlay below header and carousel */
 }
 
@@ -172,8 +172,7 @@ body {
     border: 1px solid #ddd; /* Light gray border for the card */
     border-radius: 10px; /* Rounded corners */
     padding: 1.5vw; /* Internal padding */
-    width: 100%;
-    max-width: 200px;
+    width: 20vw;
     display: flex; /* Enable flexbox to center content */
     flex-direction: column; /* Stack the content vertically */
     justify-content: center; /* Vertically center content */
